@@ -1,0 +1,20 @@
+{
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/promise/phone.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/promise/phone/issues"
+  },
+  "homepage": "https://github.com/promise/phone#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "fs": "0.0.1-security",
+    "twilio": "^3.55.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0"
+  }
+}

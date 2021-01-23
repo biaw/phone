@@ -1,0 +1,19 @@
+{
+  "token": "DISCORD TOKEN HERE",
+  "owner": "YOUR DISCORD USER ID HERE",
+  "main_guild": "THE PRIVATE GUILD ID HERE",
+  "phone_number": "YOUR PHONE NUMBER HERE (ex. +12025550152, must include the country code and the plus!)",
+  "twilio": {
+    "account_sid": "ACCOUNT SID ==> https://twilio.com/console",
+    "auth_token": "AUTH TOKEN ==> https://twilio.com/console",
+    "phone_number": "A PHONE NUMBER (including the country code and the plus) ==> https://www.twilio.com/console/phone-numbers/incoming"
+  },
+  "messages": {
+    "denied": "⛔ You don't have permission to do this.",
+    "calling": "☎️ Calling ...",
+    "in_progress": "📞 Call in progress.",
+    "line_busy": "♨️ Line busy. Sending an urgent message instead.",
+    "finished": "✅ Call finished. Call cost {1} and lasted {2} seconds.",
+    "failed": "❌ Call failed, maybe the phone is off. Sending an urgent message instead."
+  }
+}
