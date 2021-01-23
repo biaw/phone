@@ -15,7 +15,7 @@ You will need:
 
 Once you have all of these available, rename the `config.example.json` to `config.json`, fill it in and customize the messages to however you'd like them. Also do `npm i` in the directory to download all the modules needed for this to work.
 
-When you have the bot running (do `node .` to start it), you can then go to your private server and write `/invitelink` to get the invite link. You can add the application to other servers you'd like, and it does not show up in the members list because it is only using the application commands to interact. Nice, right?
+When you have the bot running (do `node .` to start it), you can then add it to your private server with this link: https://discord.com/api/oauth2/authorize?client_id=BOT_ID_HERE&scope=bot%20applications.commands. When it's added, write `/invitelink` to get the invite link for the bot. You can use this to add the command to other servers you'd like, like the server your staff team is on. It does not show up in the members list because it is only using the application commands to interact. Nice, right?
 
 You also need to whitelist the users you want to be able to call you. Do `/whitelist id:12345678` with the ID of a user. You can also whitelist entire roles with the same command to whitelist all the users that has this role. An example would be a general Staff role.
 
