@@ -48,6 +48,25 @@ dClient.on("ready", () => {
       }
     ]
   }});
+
+  dClient.api.applications(dClient.user.id).guilds(config.main_guild).commands.post({ data: {
+    name: "callother",
+    description: "Call someone else.",
+    options: [
+      {
+        type: 3,
+        name: "number",
+        description: "The other person's number.",
+        required: true
+      },
+      {
+        type: 3,
+        name: "message",
+        description: "The raw message you want to include in the call.",
+        required: true
+      }
+    ]
+  }});
 });
 
 dClient.ws.on("INTERACTION_CREATE", async interaction => {
@@ -125,6 +144,38 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
       }});
     }
     fs.writeFile("./db.json", JSON.stringify(db), "utf8", () => {});
+  } else if (interaction.data.name == "callother") {
+    const phonenumber = interaction.data.options.find(o => o.name == "number").value;
+    const message = interaction.data.options.find(o => o.name == "message").value;
+
+    const twiml = new Twilio.twiml.VoiceResponse();
+    twiml.say(message);
+
+    tClient.calls.create({
+      twiml: twiml.toString(),
+      to: phonenumber,
+      from: config.twilio.phone_number
+    }).then(async call => {
+      await dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
+        type: 4,
+        data: {
+          content: config.messages.calling
+        }
+      }});
+
+      let currentStatus = "queued";
+      while (!["completed", "busy", "failed"].includes(currentStatus)) {
+        await new Promise(resolve => setTimeout(resolve, 1000)); // sleep between calls
+        const { status, price, priceUnit, duration } = await tClient.calls(call.sid).fetch();
+        if (status !== currentStatus) {
+          if (status == "in-progress") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.in_progress }});
+          else if (status == "completed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.finished.replace(/\{1\}/g, `${price} ${priceUnit}`).replace(/\{2\}/g, duration) }});
+          else if (status == "busy") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.line_busy }});
+          else if (status == "failed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.failed }});
+          currentStatus = status;
+        }
+      }
+    })
   }
 });
 
