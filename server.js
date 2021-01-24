@@ -101,7 +101,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
         const { status, price, priceUnit, duration } = await tClient.calls(call.sid).fetch();
         if (status !== currentStatus) {
           if (status == "in-progress") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.in_progress }});
-          else if (status == "completed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.finished.replace(/\{1\}/g, `${price} ${priceUnit}`).replace(/\{2\}/g, duration) }});
+          else if (status == "completed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.finished.replace(/\{1\}/g, price ? `${price} ${priceUnit}` : "N/A").replace(/\{2\}/g, duration) }});
           else if (status == "busy") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.line_busy }});
           else if (status == "failed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.failed }});
           currentStatus = status;
@@ -169,7 +169,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
         const { status, price, priceUnit, duration } = await tClient.calls(call.sid).fetch();
         if (status !== currentStatus) {
           if (status == "in-progress") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.in_progress }});
-          else if (status == "completed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.finished.replace(/\{1\}/g, `${price} ${priceUnit}`).replace(/\{2\}/g, duration) }});
+          else if (status == "completed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.finished.replace(/\{1\}/g, price ? `${price} ${priceUnit}` : "N/A").replace(/\{2\}/g, duration) }});
           else if (status == "busy") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.line_busy }});
           else if (status == "failed") await dClient.api.webhooks(dClient.user.id, interaction.token).messages["@original"].patch({ data: { content: config.messages.failed }});
           currentStatus = status;
