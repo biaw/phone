@@ -71,7 +71,7 @@ dClient.on("ready", () => {
 
 dClient.ws.on("INTERACTION_CREATE", async interaction => {
   if (interaction.data.name == "call") {
-    if (!db.find(id => interaction.member.user.id == id || interaction.member.roles.includes(id))) // check whitelist
+    if (!db.find(id => interaction.member.user.id == id || interaction.member.roles.includes(id) || interaction.guild_id == id)) // check whitelist
       return dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
         type: 3,
         data: {
