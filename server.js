@@ -73,7 +73,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
   if (interaction.data.name == "call") {
     if (!db.find(id => interaction.member.user.id == id || interaction.member.roles.includes(id) || interaction.guild_id == id)) // check whitelist
       return dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
-        type: 3,
+        type: 4,
         data: {
           content: config.messages.denied,
           flags: 64 // private message
@@ -116,7 +116,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
     });
   } else if (interaction.data.name == "invitelink") {
     dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
-      type: 3,
+      type: 4,
       data: {
         content: `🔗 <https://discord.com/api/oauth2/authorize?client_id=${dClient.user.id}&scope=applications.commands>\nKeep in mind the call-command will only work for those who are whitelisted.`,
         flags: 64 // private message
@@ -127,7 +127,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
     if (db.includes(id)) {
       db = db.filter(i => i !== id);
       dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
-        type: 3,
+        type: 4,
         data: {
           content: `✅ Removed ID \`${id}\` from the whitelist.`,
           flags: 64 // private message
@@ -136,7 +136,7 @@ dClient.ws.on("INTERACTION_CREATE", async interaction => {
     } else {
       db.push(id);
       dClient.api.interactions(interaction.id, interaction.token).callback.post({ data: {
-        type: 3,
+        type: 4,
         data: {
           content: `✅ Added ID \`${id}\` to the whitelist.`,
           flags: 64 // private message
