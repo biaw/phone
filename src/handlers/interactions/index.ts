@@ -17,14 +17,24 @@ export default async (client: Client<true>): Promise<void> => {
     if (interaction.isCommand()) {
       const adminCommand = adminCommands.find(command => command.name === interaction.commandName);
       if (adminCommand && interaction.guildId === config.DISCORD_GUILD_ID) {
-        if (interaction.user.id !== config.DISCORD_OWNER_ID) return interaction.reply("⛔ You are not allowed to use this command.");
+        if (interaction.user.id !== config.DISCORD_OWNER_ID) {
+          return interaction.reply({
+            content: "⛔ You are not allowed to use this command.",
+            ephemeral: true,
+          });
+        }
         const { execute }: AdminCommand = (await import(`../../commands/admin/${adminCommand.name}`)).default;
         return void execute(interaction, convertArguments(interaction.options.data));
       }
 
       const globalCommand = commands.find(command => command.name === interaction.commandName);
       if (globalCommand) {
-        if (await whitelist.get(interaction.user.id) !== true) return interaction.reply("⛔ You are not allowed to use this command.");
+        if (!Object.keys(await whitelist.getAll()).some(id => [interaction.user.id, ...Array.isArray(interaction.member.roles) ? interaction.member.roles : interaction.member.roles.cache.map(r => r.id)].includes(id))) {
+          return interaction.reply({
+            content: "⛔ You are not allowed to use this command.",
+            ephemeral: true,
+          });
+        }
         const { execute }: GlobalCommand = (await import(`../../commands/${globalCommand.name}.js`)).default;
         return void execute(interaction, convertArguments(interaction.options.data));
       }
