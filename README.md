@@ -41,7 +41,7 @@ Having a log volume is optional, it's mostly for development and debugging. A da
 docker run --name phone \
   -e "DISCORD_TOKEN=" \
   -e "DISCORD_OWNER_ID=" \
-  -e "DISCORD_OWNER_GUILD_ID=" \
+  -e "DISCORD_GUILD_ID=" \
   -e "TWILIO_ACCOUNT_SID=" \
   -e "TWILIO_AUTH_TOKEN=" \
   -e "TWILIO_PHONE_NUMBER=" \
@@ -57,7 +57,7 @@ docker run --name phone \
 docker run --name phone ^
   -e "DISCORD_TOKEN=" ^
   -e "DISCORD_OWNER_ID=" ^
-  -e "DISCORD_OWNER_GUILD_ID=" ^
+  -e "DISCORD_GUILD_ID=" ^
   -e "TWILIO_ACCOUNT_SID=" ^
   -e "TWILIO_AUTH_TOKEN=" ^
   -e "TWILIO_PHONE_NUMBER=" ^

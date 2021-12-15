@@ -8,6 +8,11 @@ export const whitelist = {
       whitelistDatabase.getItem(key, resolve);
     });
   },
+  getAll() {
+    return new Promise<Record<string, unknown>>(resolve => {
+      whitelistDatabase.get(resolve);
+    });
+  },
   set(key: string, value: boolean) {
     return new Promise(resolve => {
       whitelistDatabase.setItem(key, value, resolve);
