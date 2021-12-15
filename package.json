@@ -1,20 +1,30 @@
 {
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/promise/phone.git"
-  },
+  "name": "phone",
+  "main": "build/bot.js",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/promise/phone/issues"
-  },
-  "homepage": "https://github.com/promise/phone#readme",
-  "dependencies": {
-    "discord.js": "^12.5.1",
-    "fs": "0.0.1-security",
-    "twilio": "^3.55.0"
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint ./src",
+    "start": "node .",
+    "watch": "tsc -w"
   },
   "devDependencies": {
-    "eslint": "^7.18.0"
+    "@types/node": "^16.11.13",
+    "@types/quick-store": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1"
+  },
+  "dependencies": {
+    "bufferutil": "^4.0.5",
+    "discord.js": "^13.3.1",
+    "dotenv": "^10.0.0",
+    "erlpack": "github:discord/erlpack",
+    "quick-store": "^0.1.4",
+    "twilio": "^3.71.3",
+    "utf-8-validate": "^5.0.7",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5",
+    "zlib-sync": "^0.1.7"
   }
 }

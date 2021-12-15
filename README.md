@@ -1,23 +1,71 @@
-# Discord Emergency Phone
+[![Test build](https://img.shields.io/github/workflow/status/promise/phone/Build%20and%20publish)](https://github.com/promise/phone/actions/workflows/build-and-publish.yml)
+[![Linting](https://img.shields.io/github/workflow/status/promise/phone/Linting?label=quality)](https://github.com/promise/phone/actions/workflows/linting.yml)
+[![Analysis and Scans](https://img.shields.io/github/workflow/status/promise/phone/Analysis%20and%20Scans?label=scan)](https://github.com/promise/phone/actions/workflows/analysis-and-scans.yml)
+[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19486/branches/507856/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19486&bid=507856)
+[![discord.js version](https://img.shields.io/github/package-json/dependency-version/promise/phone/discord.js)](https://www.npmjs.com/package/discord.js)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/promise/phone.svg)](https://github.com/promise/phone/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/promise/phone.svg)](https://github.com/promise/phone/pulls)
 
-A Discord application to call your cellphone through Twilio in case of emergencies. Is your staff in dangerously need of assistance? Is your server getting raided? Did something blow up on your VPS? This will make it easy for your staff members (or friends, colleagues, etc.) to call your cellphone through Discord.
+# phone
 
-## Screenshot
+A Discord application to call your phone (yes, your actual phone) through Twilio in case of emergencies.
 
-![The /call command](https://i.imgur.com/CfjgfCt.gif)
+![Example](https://i.imgur.com/w6RL1Gi.gif)
+
+## Usage examples
+
+- If you're managing some form of service, like a webserver or Discord bot then your staff can call your cellphone if it's down.
+- If a server you're admin in is getting raided and you're not available, they can call your cellphone to let you know.
+
+Generally, it's a way for other Discord members to contact you through your phone. The main purpose is to be even more available, like when you don't have Wi-Fi/celluar data availale.
 
 ## Setup
 
+### Requirements
+
 You will need:
-- this source code forked or downloaded to a folder
-- a Discord bot added to a private server (for you only)
+- a Discord bot set up (https://discord.dev)
+- a private Discord server
+  - this will be where you can whitelist other people, and also call others with your phone number. The server is mostly to register admin-only commands so it doesn't appear in public slash command lists on other servers. The commands are still role-locked.
 - a Twilio account set up with a bought phone number
 
-Once you have all of these available, rename the `config.example.json` to `config.json`, fill it in and customize the messages to however you'd like them. Also do `npm i` in the directory to download all the modules needed for this to work.
+### Setting up using Docker
 
-When you have the bot running (do `node .` to start it), you can then add it to your private server with this link: https://discord.com/api/oauth2/authorize?client_id=BOT_ID_HERE&scope=bot%20applications.commands. When it's added, write `/invitelink` to get the invite link for the bot. You can use this to add the command to other servers you'd like, like the server your staff team is on. It does not show up in the members list because it is only using the application commands to interact. Nice, right?
+With Docker, you don't even need to download anything. Fill in the environment variables and you should be able to run the commands below. See the [`example.env`](https://github.com/promise/phone/blob/master/example.env)-file for more information on what to fill these values with.
 
-You also need to whitelist the users you want to be able to call you. Do `/whitelist id:12345678` with the ID of a user. You can also whitelist entire roles with the same command to whitelist all the users that has this role. An example would be a general Staff role.
+Having a log volume is optional, it's mostly for development and debugging. A database volume is required though, as we store information like whitelisted users etc.
+
+#### Linux
+
+```cmd
+docker run --name phone \
+  -e "DISCORD_TOKEN=" \
+  -e "DISCORD_OWNER_ID=" \
+  -e "DISCORD_OWNER_GUILD_ID=" \
+  -e "TWILIO_ACCOUNT_SID=" \
+  -e "TWILIO_AUTH_TOKEN=" \
+  -e "TWILIO_PHONE_NUMBER=" \
+  -e "OWNER_PHONE_NUMBER=" \
+  -v /phone/database:/app/database \
+  -v /phone/logs:/app/logs \
+  promisesolutions/phone:latest
+```
+
+#### Windows
+
+```cmd
+docker run --name phone ^
+  -e "DISCORD_TOKEN=" ^
+  -e "DISCORD_OWNER_ID=" ^
+  -e "DISCORD_OWNER_GUILD_ID=" ^
+  -e "TWILIO_ACCOUNT_SID=" ^
+  -e "TWILIO_AUTH_TOKEN=" ^
+  -e "TWILIO_PHONE_NUMBER=" ^
+  -e "OWNER_PHONE_NUMBER=" ^
+  -v "C:\phone\database":/app/database ^
+  -v "C:\phone\logs":/app/logs ^
+  promisesolutions/phone:latest
+```
 
 ## Pricing
 
