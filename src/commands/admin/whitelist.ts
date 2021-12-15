@@ -3,24 +3,24 @@ import { phoneLogger } from "../../utils/logger";
 import { whitelist } from "../../utils/database";
 
 export default {
-  description: "Whitelist a user or role so they can use global commands",
+  description: "Whitelist a user so they can use global commands",
   options: [
     {
       type: "STRING",
       name: "id",
-      description: "The user ID or role ID to whitelist. Keep in mind that role IDs won't work across servers",
+      description: "The user ID to whitelist.",
       required: true,
     },
   ],
   execute: async (interaction, { id }: { id: string; }) => {
     if (await whitelist.get(id)) {
       whitelist.delete(id);
-      phoneLogger.info(`Removed whitelist entry for user/role ID ${id}.`);
-      return interaction.reply("🔓 User or role is no longer whitelisted.");
+      phoneLogger.info(`Removed whitelist entry for user ID ${id}.`);
+      return interaction.reply("🔓 User is no longer whitelisted.");
     }
 
     whitelist.set(id, true);
-    phoneLogger.info(`Whitelisted user/role ID ${id}.`);
-    return interaction.reply("🔒 User or role is now whitelisted.");
+    phoneLogger.info(`Whitelisted user ID ${id}.`);
+    return interaction.reply("🔒 User is now whitelisted.");
   },
 } as AdminCommand;
