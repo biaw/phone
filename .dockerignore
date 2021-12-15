@@ -1,5 +1,5 @@
 /node_modules/
 /build/
-/database/
+/database/**
+!/database/.gitkeep
 /logs/
-server.js
