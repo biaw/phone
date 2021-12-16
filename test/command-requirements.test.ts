@@ -1,8 +1,17 @@
-/* eslint-disable no-loop-func */
 import { ApplicationCommandData } from "discord.js";
 import { Command } from "../src/@types/command";
 import { join } from "path";
 import { readdirSync } from "fs";
+
+Object.assign(process.env, {
+  DISCORD_TOKEN: "********",
+  DISCORD_OWNER_ID: "110090225929191424",
+  DISCORD_GUILD_ID: "436571887263285249",
+  TWILIO_ACCOUNT_SID: "AC*******",
+  TWILIO_AUTH_TOKEN: "********",
+  TWILIO_PHONE_NUMBER: "+44********",
+  OWNER_PHONE_NUMBER: "+47********",
+}, process.env); // avoid config to fail during tests. before you ask: yes, "process.env" is twice on purpose
 
 testCommands();
 testCommands("admin");
