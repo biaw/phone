@@ -1,11 +1,11 @@
-[![Test build](https://img.shields.io/github/workflow/status/promise/phone/Build%20and%20publish)](https://github.com/promise/phone/actions/workflows/build-and-publish.yml)
-[![Linting](https://img.shields.io/github/workflow/status/promise/phone/Linting?label=quality)](https://github.com/promise/phone/actions/workflows/linting.yml)
-[![Analysis and Scans](https://img.shields.io/github/workflow/status/promise/phone/Analysis%20and%20Scans?label=scan)](https://github.com/promise/phone/actions/workflows/analysis-and-scans.yml)
-[![Testing](https://img.shields.io/github/workflow/status/promise/phone/Testing?label=tests)](https://github.com/promise/phone/actions/workflows/testing.yml)
-[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19486/branches/507856/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19486&bid=507856)
-[![discord.js version](https://img.shields.io/github/package-json/dependency-version/promise/phone/discord.js)](https://www.npmjs.com/package/discord.js)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/promise/phone.svg)](https://github.com/promise/phone/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/promise/phone.svg)](https://github.com/promise/phone/pulls)
+[![Test build](https://img.shields.io/github/workflow/status/biaw/phone/Build%20and%20publish)](https://github.com/biaw/phone/actions/workflows/build-and-publish.yml)
+[![Linting](https://img.shields.io/github/workflow/status/biaw/phone/Linting?label=quality)](https://github.com/biaw/phone/actions/workflows/linting.yml)
+[![Analysis and Scans](https://img.shields.io/github/workflow/status/biaw/phone/Analysis%20and%20Scans?label=scan)](https://github.com/biaw/phone/actions/workflows/analysis-and-scans.yml)
+[![Testing](https://img.shields.io/github/workflow/status/biaw/phone/Testing?label=tests)](https://github.com/biaw/phone/actions/workflows/testing.yml)
+[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19527/branches/509267/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19527&bid=509267)
+[![discord.js version](https://img.shields.io/github/package-json/dependency-version/biaw/phone/discord.js)](https://www.npmjs.com/package/discord.js)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/biaw/phone.svg)](https://github.com/biaw/phone/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/biaw/phone.svg)](https://github.com/biaw/phone/pulls)
 
 # phone
 
@@ -32,7 +32,7 @@ You will need:
 
 ### Setting up using Docker
 
-With Docker, you don't even need to download anything. Fill in the environment variables and you should be able to run the commands below. See the [`example.env`](https://github.com/promise/phone/blob/master/example.env)-file for more information on what to fill these values with.
+With Docker, you don't even need to download anything. Fill in the environment variables and you should be able to run the commands below. See the [`example.env`](https://github.com/biaw/phone/blob/master/example.env)-file for more information on what to fill these values with.
 
 Having a log volume is optional, it's mostly for development and debugging. A database volume is required though, as we store information like whitelisted users etc.
 
