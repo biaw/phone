@@ -2,7 +2,11 @@ name: Build and publish
 
 on:
   push:
-    branches: ['*']
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
   pull_request:
 
 jobs:
