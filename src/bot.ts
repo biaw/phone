@@ -6,7 +6,7 @@ import interactions from "./handlers/interactions";
 const client = new Client({
   userAgentSuffix: [
     `Responsible is ${config.DISCORD_OWNER_ID}`,
-    "Source: https://github.com/promise/phone",
+    "Source: https://github.com/biaw/phone",
   ],
   intents: ["GUILDS"],
 });
