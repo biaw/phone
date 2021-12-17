@@ -9,16 +9,6 @@
     "test": "jest",
     "watch": "tsc -w"
   },
-  "devDependencies": {
-    "@types/jest": "^27.0.3",
-    "@types/node": "^16.11.13",
-    "@types/quick-store": "^0.1.0",
-    "@typescript-eslint/eslint-plugin": "^5.7.0",
-    "@typescript-eslint/parser": "^5.7.0",
-    "eslint": "^8.4.1",
-    "jest": "^27.4.5",
-    "ts-jest": "^27.1.2"
-  },
   "dependencies": {
     "bufferutil": "^4.0.5",
     "discord.js": "^13.3.1",
@@ -30,6 +20,17 @@
     "winston": "^3.3.3",
     "winston-daily-rotate-file": "^4.5.5",
     "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.13",
+    "@types/quick-store": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "eslint": "^8.4.1",
+    "jest": "^27.4.5",
+    "ts-jest": "^27.1.2"
+  },
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
