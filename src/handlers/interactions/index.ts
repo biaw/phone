@@ -29,7 +29,9 @@ export default async (client: Client<true>): Promise<void> => {
 
       const globalCommand = commands.find(command => command.name === interaction.commandName);
       if (globalCommand) {
-        if (!Object.keys(await whitelist.getAll()).some(id => [interaction.user.id, ...Array.isArray(interaction.member.roles) ? interaction.member.roles : interaction.member.roles.cache.map(r => r.id)].includes(id))) {
+        const member = interaction.member || { roles: []};
+        const memberRoles = Array.isArray(member.roles) ? member.roles : member.roles.cache.map(r => r.id);
+        if (!Object.keys(await whitelist.getAll()).some(id => [interaction.user.id, ...memberRoles].includes(id))) {
           return interaction.reply({
             content: "⛔ You are not allowed to use this command.",
             ephemeral: true,
