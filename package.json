@@ -15,7 +15,7 @@
     "dotenv": "^14.2.0",
     "erlpack": "github:discord/erlpack",
     "quick-store": "^0.1.4",
-    "twilio": "^3.73.0",
+    "twilio": "^3.73.1",
     "utf-8-validate": "^5.0.8",
     "winston": "^3.4.0",
     "winston-daily-rotate-file": "^4.5.5",
