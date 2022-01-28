@@ -18,7 +18,7 @@
     "twilio": "^3.73.1",
     "utf-8-validate": "^5.0.8",
     "winston": "^3.5.0",
-    "winston-daily-rotate-file": "^4.5.5",
+    "winston-daily-rotate-file": "^4.6.0",
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
