@@ -53,12 +53,6 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
-      with:
-        fetch-depth: 2
-
-    - name: Checkout head of pull request
-      run: git checkout HEAD^2
-      if: ${{ github.event_name == 'pull_request' }}
 
     - name: Perform analysis
       uses: github/ossar-action@v1
