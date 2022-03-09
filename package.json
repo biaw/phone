@@ -16,7 +16,7 @@
     "erlpack": "github:discord/erlpack",
     "quick-store": "^0.1.4",
     "twilio": "^3.75.0",
-    "utf-8-validate": "^5.0.8",
+    "utf-8-validate": "^5.0.9",
     "winston": "^3.6.0",
     "winston-daily-rotate-file": "^4.6.1",
     "zlib-sync": "^0.1.7"
