@@ -49,7 +49,7 @@ docker run --name phone \
   -e "OWNER_PHONE_NUMBER=" \
   -v /phone/database:/app/database \
   -v /phone/logs:/app/logs \
-  promisesolutions/phone:latest
+  ghcr.io/biaw/phone:latest
 ```
 
 #### Windows
@@ -65,7 +65,7 @@ docker run --name phone ^
   -e "OWNER_PHONE_NUMBER=" ^
   -v "C:\phone\database":/app/database ^
   -v "C:\phone\logs":/app/logs ^
-  promisesolutions/phone:latest
+  ghcr.io/biaw/phone:latest
 ```
 
 ## Pricing
