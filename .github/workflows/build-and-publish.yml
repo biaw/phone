@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: ${{ github.ref == 'refs/heads/master' }}
-          tags: ghcr.io/{{ github.repository }}:latest,ghcr.io/{{ github.repository }}:${{ github.sha }}
+          tags: ghcr.io/${{ github.repository }}:latest,ghcr.io/${{ github.repository }}:${{ github.sha }}
