@@ -1,5 +1,5 @@
-import { CallStatus } from "twilio/lib/rest/api/v2010/account/call";
-import { GlobalCommand } from "../@types/command";
+import type { CallStatus } from "twilio/lib/rest/api/v2010/account/call";
+import type { GlobalCommand } from "../@types/command";
 import config from "../config";
 import { createCall } from "../utils/twilio";
 import { phoneLogger } from "../utils/logger";

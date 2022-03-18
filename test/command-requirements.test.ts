@@ -1,5 +1,5 @@
-import { ApplicationCommandData } from "discord.js";
-import { Command } from "../src/@types/command";
+import type { ApplicationCommandData } from "discord.js";
+import type { Command } from "../src/@types/command";
 import { join } from "path";
 import { readdirSync } from "fs";
 

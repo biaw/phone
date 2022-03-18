@@ -1,4 +1,4 @@
-import { AdminCommand } from "../../@types/command";
+import type { AdminCommand } from "../../@types/command";
 
 export default {
   description: "Get a shareable invite",
