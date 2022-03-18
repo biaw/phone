@@ -23,7 +23,12 @@ function testCommands(path = "") {
     if (file.endsWith(".js")) {
       // eslint-disable-next-line @typescript-eslint/no-var-requires
       const { description, options }: Command = require(join(__dirname, "..", "build", "commands", path, file)).default;
-      commands.push({ name: file.split(".")[0], description, options, type: "CHAT_INPUT" });
+      commands.push({
+        name: file.split(".")[0],
+        description,
+        ...options && { options },
+        type: "CHAT_INPUT",
+      });
     }
   }
 
