@@ -1,4 +1,4 @@
-import { AdminCommand } from "../../@types/command";
+import type { AdminCommand } from "../../@types/command";
 import { phoneLogger } from "../../utils/logger";
 import { whitelist } from "../../utils/database";
 

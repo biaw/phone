@@ -1,5 +1,5 @@
-import { AdminCommand, Command, CommandArguments, GlobalCommand } from "../../@types/command";
-import { ApplicationCommandData, Client, CommandInteractionOptionResolver } from "discord.js";
+import type { AdminCommand, Command, CommandArguments, GlobalCommand } from "../../@types/command";
+import type { ApplicationCommandData, Client, CommandInteractionOptionResolver } from "discord.js";
 import config from "../../config";
 import { join } from "path";
 import { phoneLogger } from "../../utils/logger";
@@ -56,7 +56,11 @@ function getCommands(path: string) {
         for (const file of files) {
           if (file.endsWith(".js")) {
             const { description, options }: Command = (await import(`${path}/${file}`)).default;
-            commands.push({ name: file.split(".")[0], description, options });
+            commands.push({
+              name: file.split(".")[0],
+              description,
+              ...options && { options },
+            });
           }
         }
 

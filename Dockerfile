@@ -1,15 +1,12 @@
 FROM node:16-alpine
-RUN apk add python3 make gcc g++ dumb-init
+RUN apk add dumb-init g++ gcc make python3
 
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm i
 
-COPY ./src .
-COPY tsconfig.json .
+COPY . ./
 RUN npm run build
-
-COPY . .
 
 CMD ["dumb-init", "npm", "start"]
