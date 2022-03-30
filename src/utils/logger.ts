@@ -12,7 +12,7 @@ export const phoneLogger = createLogger({
   format: format.combine(
     format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     format.align(),
-    format.printf(({ level, timestamp, message }) => `${timestamp} ${level}: ${message}`),
+    format.printf(({ level, timestamp, message }) => `${timestamp as string} ${level}: ${message}`),
   ),
   transports: [
     new DailyRotateFile({
@@ -36,7 +36,7 @@ export const discordLogger = createLogger({
   format: format.combine(
     format.timestamp({ format: "YYYY-MM-DD HH:mm:ss" }),
     format.align(),
-    format.printf(({ level, timestamp, message }) => `${timestamp} ${level}: ${message}`),
+    format.printf(({ level, timestamp, message }) => `${timestamp as string} ${level}: ${message}`),
   ),
   transports: [
     new DailyRotateFile({

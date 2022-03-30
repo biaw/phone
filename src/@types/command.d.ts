@@ -1,8 +1,8 @@
-import { ApplicationCommandOptionData, CommandInteraction } from "discord.js";
+import type { ApplicationCommandOptionData, CommandInteraction, CommandInteractionOption } from "discord.js";
 
-export type Command = {
+export interface Command {
   description: string;
-  options?: Array<ApplicationCommandOptionData>;
+  options?: ApplicationCommandOptionData[];
   execute(interaction: CommandInteraction, args: CommandArguments): Promise<void>;
 }
 
@@ -10,6 +10,4 @@ export type Command = {
 export type GlobalCommand = Command;
 export type AdminCommand = Command;
 
-export type CommandArguments = {
-  [argument: string]: CommandInteractionOption["value"];
-}
+export type CommandArguments = Record<string, CommandInteractionOption["value"]>;

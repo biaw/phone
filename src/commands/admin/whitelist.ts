@@ -12,14 +12,14 @@ export default {
       required: true,
     },
   ],
-  execute: async (interaction, { id }: { id: string; }) => {
+  execute: async (interaction, { id }: { id: string }) => {
     if (await whitelist.get(id)) {
-      whitelist.delete(id);
+      void whitelist.delete(id);
       phoneLogger.info(`Removed whitelist entry for user/role ID ${id}.`);
       return interaction.reply("🔓 User or role is no longer whitelisted.");
     }
 
-    whitelist.set(id, true);
+    void whitelist.set(id, true);
     phoneLogger.info(`Whitelisted user/role ID ${id}.`);
     return interaction.reply("🔒 User or role is now whitelisted.");
   },

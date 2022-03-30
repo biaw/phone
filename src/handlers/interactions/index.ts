@@ -8,10 +8,10 @@ import { whitelist } from "../../utils/database";
 
 export default async (client: Client<true>): Promise<void> => {
   const commands = await getCommands("../../commands");
-  client.application.commands.set(commands);
+  void client.application.commands.set(commands);
 
   const adminCommands = await getCommands("../../commands/admin");
-  client.guilds.resolve(config.DISCORD_GUILD_ID)?.commands.set(adminCommands);
+  void client.guilds.resolve(config.DISCORD_GUILD_ID)?.commands.set(adminCommands);
 
   client.on("interactionCreate", async interaction => {
     if (interaction.isCommand()) {
@@ -23,21 +23,22 @@ export default async (client: Client<true>): Promise<void> => {
             ephemeral: true,
           });
         }
-        const { execute }: AdminCommand = (await import(`../../commands/admin/${adminCommand.name}`)).default;
+        const { execute } = (await import(`../../commands/admin/${adminCommand.name}`) as { default: AdminCommand }).default;
         return void execute(interaction, convertArguments(interaction.options.data));
       }
 
       const globalCommand = commands.find(command => command.name === interaction.commandName);
       if (globalCommand) {
-        const member = interaction.member || { roles: []};
-        const memberRoles = Array.isArray(member.roles) ? member.roles : member.roles.cache.map(r => r.id);
+        const member = interaction.member ?? { roles: [] as string[] };
+        const memberRoles = Array.isArray(member.roles) ? member.roles : member.roles.cache.map(role => role.id);
         if (!Object.keys(await whitelist.getAll()).some(id => [interaction.user.id, ...memberRoles].includes(id))) {
           return interaction.reply({
             content: "⛔ You are not allowed to use this command.",
             ephemeral: true,
           });
         }
-        const { execute }: GlobalCommand = (await import(`../../commands/${globalCommand.name}.js`)).default;
+        // eslint-disable-next-line @typescript-eslint/unbound-method
+        const { execute } = (await import(`../../commands/${globalCommand.name}.js`) as { default: GlobalCommand }).default;
         return void execute(interaction, convertArguments(interaction.options.data));
       }
     }
@@ -47,15 +48,15 @@ export default async (client: Client<true>): Promise<void> => {
   });
 };
 
-function getCommands(path: string) {
-  return new Promise<Array<ApplicationCommandData>>((resolve, reject) => {
+async function getCommands(path: string): Promise<ApplicationCommandData[]> {
+  return new Promise((resolve, reject) => {
     readdir(join(__dirname, path))
       .then(async files => {
-        const commands: Array<ApplicationCommandData> = [];
+        const commands: ApplicationCommandData[] = [];
 
         for (const file of files) {
           if (file.endsWith(".js")) {
-            const { description, options }: Command = (await import(`${path}/${file}`)).default;
+            const { description, options } = (await import(`${path}/${file}`) as { default: Command }).default;
             commands.push({
               name: file.split(".")[0],
               description,
@@ -70,8 +71,8 @@ function getCommands(path: string) {
   });
 }
 
-function convertArguments(options: CommandInteractionOptionResolver["data"]) {
+function convertArguments(options: CommandInteractionOptionResolver["data"]): CommandArguments {
   const args: CommandArguments = {};
-  for (const o of options) args[o.name] = o.value;
+  for (const option of options) args[option.name] = option.value;
   return args;
 }

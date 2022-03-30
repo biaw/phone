@@ -3,26 +3,26 @@ import quick from "quick-store";
 
 const whitelistDatabase = quick("database/whitelist.json");
 export const whitelist = {
-  get(key: string) {
+  async get(key: string): Promise<unknown> {
     return new Promise(resolve => {
       whitelistDatabase.getItem(key, resolve);
     });
   },
-  getAll() {
-    return new Promise<Record<string, unknown>>(resolve => {
+  async getAll(): Promise<Record<string, unknown>> {
+    return new Promise(resolve => {
       whitelistDatabase.get(resolve);
     });
   },
-  set(key: string, value: boolean) {
+  async set(key: string, value: boolean): Promise<void> {
     return new Promise(resolve => {
-      whitelistDatabase.setItem(key, value, resolve);
+      whitelistDatabase.setItem(key, value, () => resolve(void 0));
     });
   },
-  delete(key: string) {
-    return new Promise(resolve => {
-      whitelistDatabase.removeItem(key, resolve);
+  async delete(key: string): Promise<void> {
+    return new Promise<void>(resolve => {
+      whitelistDatabase.removeItem(key, () => resolve(void 0));
     });
   },
 };
 
-whitelist.set(config.DISCORD_OWNER_ID, true);
+void whitelist.set(config.DISCORD_OWNER_ID, true);

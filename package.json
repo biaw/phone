@@ -22,7 +22,7 @@
     "zlib-sync": "^0.1.7"
   },
   "devDependencies": {
-    "@biaw/eslint-config": "^1.0.2",
+    "@promise/eslint-config": "github:promise/eslint-config",
     "@tsconfig/node16-strictest": "^1.0.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.26",
@@ -33,7 +33,7 @@
     "typescript": "^4.6.3"
   },
   "eslintConfig": {
-    "extends": "@biaw"
+    "extends": "@promise"
   },
   "jest": {
     "preset": "ts-jest",

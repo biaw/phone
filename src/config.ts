@@ -19,6 +19,7 @@ if (!TWILIO_AUTH_TOKEN) throw new Error("Environment variable TWILIO_AUTH_TOKEN 
 if (!TWILIO_PHONE_NUMBER) throw new Error("Environment variable TWILIO_PHONE_NUMBER is required");
 if (!OWNER_PHONE_NUMBER) throw new Error("Environment variable OWNER_PHONE_NUMBER is required");
 
+/* eslint-disable @typescript-eslint/naming-convention */
 export default {
   DISCORD_TOKEN,
   DISCORD_OWNER_ID,
@@ -28,3 +29,4 @@ export default {
   TWILIO_PHONE_NUMBER,
   OWNER_PHONE_NUMBER,
 };
+/* eslint-enable @typescript-eslint/naming-convention */

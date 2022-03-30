@@ -20,10 +20,10 @@ client.once("ready", trueClient => {
     })}`);
   }
 
-  interactions(trueClient);
+  void interactions(trueClient);
 });
 
-client
+void client
   .on("debug", info => void discordLogger.debug(info))
   .on("error", error => void discordLogger.error(`Cluster errored. ${JSON.stringify({ ...error })}`))
   .on("rateLimit", rateLimitData => void discordLogger.warn(`Rate limit ${JSON.stringify(rateLimitData)}`))

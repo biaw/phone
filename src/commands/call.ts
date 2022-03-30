@@ -14,14 +14,14 @@ export default {
       required: true,
     },
   ],
-  execute: (interaction, { message }: { message: string; }) => Promise.all([
+  execute: async (interaction, { message }: { message: string }) => Promise.all([
     interaction.reply({
       content: `☎️ *Calling <@${config.DISCORD_OWNER_ID}>...*`,
       allowedMentions: {
         users: [config.DISCORD_OWNER_ID],
       },
     }),
-    createCall(`Discord call from guild ${interaction.guild?.name || "UNKNOWN"}, user ${interaction.user.username} says: ${message}`),
+    createCall(`Discord call from guild ${interaction.guild?.name ?? "UNKNOWN"}, user ${interaction.user.username} says: ${message}`),
   ])
     .then(async ([, call]) => {
       let currentStatus: CallStatus = "queued";
@@ -29,37 +29,38 @@ export default {
         const { status, price, priceUnit, duration } = await call.fetch();
         if (status !== currentStatus) {
           switch (status) {
-          case "in-progress": {
-            phoneLogger.verbose(`Call in progress: ${JSON.stringify(call.toJSON())}`);
-            interaction.editReply("📞 Call in progress.");
-            break;
-          }
-          case "completed": {
-            phoneLogger.verbose(`Call completed: ${JSON.stringify(call.toJSON())}`);
-            interaction.editReply(`✅ Call finished. Call cost ${price ? `${price} ${priceUnit}` : "~~FREE~~"} and lasted ${parseInt(duration) === 1 ? "1 second" : `${duration} seconds`}.`);
-            break;
-          }
-          case "busy": {
-            phoneLogger.verbose(`Call busy: ${JSON.stringify(call.toJSON())}`);
-            interaction.editReply("💩 Line is busy.");
-            break;
-          }
-          case "failed": {
-            phoneLogger.verbose(`Call failed: ${JSON.stringify(call.toJSON())}`);
-            interaction.editReply("💩 Call failed.");
-            break;
-          }
-          case "no-answer": {
-            phoneLogger.verbose(`Call without answer: ${JSON.stringify(call.toJSON())}`);
-            interaction.editReply("💩 No answer.");
-            break;
-          }
+            case "in-progress": {
+              phoneLogger.verbose(`Call in progress: ${JSON.stringify(call.toJSON())}`);
+              void interaction.editReply("📞 Call in progress.");
+              break;
+            }
+            case "completed": {
+              phoneLogger.verbose(`Call completed: ${JSON.stringify(call.toJSON())}`);
+              void interaction.editReply(`✅ Call finished. Call cost ${price ? `${price} ${priceUnit}` : "~~FREE~~"} and lasted ${parseInt(duration) === 1 ? "1 second" : `${duration} seconds`}.`);
+              break;
+            }
+            case "busy": {
+              phoneLogger.verbose(`Call busy: ${JSON.stringify(call.toJSON())}`);
+              void interaction.editReply("💩 Line is busy.");
+              break;
+            }
+            case "failed": {
+              phoneLogger.verbose(`Call failed: ${JSON.stringify(call.toJSON())}`);
+              void interaction.editReply("💩 Call failed.");
+              break;
+            }
+            case "no-answer": {
+              phoneLogger.verbose(`Call without answer: ${JSON.stringify(call.toJSON())}`);
+              void interaction.editReply("💩 No answer.");
+              break;
+            }
+            default: break;
           }
         }
         currentStatus = status;
       }
     })
-    .catch(e => {
-      phoneLogger.error(`Error making call: ${JSON.stringify(e)}`);
+    .catch(err => {
+      phoneLogger.error(`Error making call: ${JSON.stringify(err)}`);
     }),
 } as GlobalCommand;
