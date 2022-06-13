@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@promise/eslint-config": "github:promise/eslint-config",
-    "@tsconfig/node16-strictest": "^1.0.1",
+    "@tsconfig/node16-strictest": "^1.0.2",
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.36",
     "@types/quick-store": "^0.1.0",
