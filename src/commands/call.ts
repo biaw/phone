@@ -12,6 +12,6 @@ export default async function callCommand(interaction: APIChatInputApplicationCo
   callbackUrl.pathname = "/call-updates";
   callbackUrl.searchParams.set("token", await encodeWebhookCredentials({ id: interaction.application_id, token: interaction.token }));
 
-  void call(`test ${option.value}`, callbackUrl);
+  void call(`Message ${interaction.user?.username ? `from user ${interaction.user.username}` : "from unknown user"}: ${option.value}`, callbackUrl);
   return { type: InteractionResponseType.DeferredChannelMessageWithSource };
 }
