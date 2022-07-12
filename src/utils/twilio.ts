@@ -22,6 +22,6 @@ export async function call(message: string, statusCallback: URL): Promise<CallIn
     body.append("StatusCallbackEvent", status);
   });
 
-  const response = await fetch(endpoint, { method: "POST", headers, body });
+  const response = await fetch(endpoint, { method: "POST", headers, body, cf: { cacheKey: body.toString() }});
   return response.json();
 }

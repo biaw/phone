@@ -10,5 +10,6 @@ export async function update(id: string, token: string, payload: RESTPatchAPIWeb
     method: "PATCH",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
+    cf: { cacheKey: `${String(Date.now())}:${String(Math.random())}` },
   });
 }

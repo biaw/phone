@@ -34,6 +34,7 @@ export default async function handleUpdateCommands(request: Request): Promise<Re
         /* eslint-enable camelcase */
       },
     ] as RESTPutAPIApplicationCommandsJSONBody),
+    cf: { cacheKey: `${String(Date.now())}:${String(Math.random())}` },
   })
     .then(async res => {
       if (res.status === 200) return new Response(await res.text(), { status: 200 });
