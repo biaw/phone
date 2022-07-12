@@ -23,6 +23,7 @@ Generally, it's a way for other Discord members to contact you through your phon
 3. Edit the Discord application and set the interactions endpoint to `https://phone.WORKER_SUBDOMAIN.workers.dev/interaction`. This is where the bot will receive interactions.
 4. Go to `https://phone.WORKER_SUBDOMAIN.workers.dev/update-commands?key=DISCORD_PUBLIC_KEY` to update and register the `/call` slash command.
 5. Add the bot by visiting `/invite`. Make sure to uncheck "Public bot" in the Discord Developer portal so other people can't add it to servers you don't want to have access to call you.
+6. It might take some time before the command appears because of Discord's caching, but you should be able to use the `/call` command within the hour!
 
 ## How calling works
 
