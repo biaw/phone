@@ -1,7 +1,7 @@
 [![Deploy](https://img.shields.io/github/workflow/status/biaw/phone/Build%20and%20publish?label=build)](https://github.com/biaw/phone/actions/workflows/build-and-publish.yml)
 [![Linting](https://img.shields.io/github/workflow/status/biaw/phone/Linting?label=quality)](https://github.com/biaw/phone/actions/workflows/linting.yml)
 [![Analysis and Scans](https://img.shields.io/github/workflow/status/biaw/phone/Analysis%20and%20Scans?label=scan)](https://github.com/biaw/phone/actions/workflows/analysis-and-scans.yml)
-[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19527/branches/509267/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19527&bid=509267)
+[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19527/branches/625870/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19527&bid=625870)
 [![GitHub Issues](https://img.shields.io/github/issues-raw/biaw/phone.svg)](https://github.com/biaw/phone/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/biaw/phone.svg)](https://github.com/biaw/phone/pulls)
 
