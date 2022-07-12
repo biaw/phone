@@ -22,8 +22,9 @@ Generally, it's a way for other Discord members to contact you through your phon
 
 1. [Deploy with Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/phone)
 2. Insert the environment variables listed in the [`wrangler.toml`](https://github.com/biaw/phone/blob/main/wrangler.toml) file. You can either use the `wrangler` command, or do it through the worker dashboard.
-3. Edit the Discord application and set the interactions endpoint to `https://phone.YOUR_CF_WORKERS_SUBDOMAIN.workers.dev/interaction`. This is where the bot will receive interactions.
-4. Add the bot by visiting `/invite`. Make sure to uncheck "Public bot" in the Discord Developer portal so other people can't add it to servers you don't want to have access to call you.
+3. Edit the Discord application and set the interactions endpoint to `https://phone.WORKER_SUBDOMAIN.workers.dev/interaction`. This is where the bot will receive interactions.
+4. Go to `https://phone.WORKER_SUBDOMAIN.workers.dev/update-commands?key=DISCORD_PUBLIC_KEY` to update and register the `/call` slash command.
+5. Add the bot by visiting `/invite`. Make sure to uncheck "Public bot" in the Discord Developer portal so other people can't add it to servers you don't want to have access to call you.
 
 ## How calling works
 
