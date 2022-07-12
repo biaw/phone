@@ -9,8 +9,6 @@
 
 A Discord application to call your phone (yes, your actual phone) through Twilio in case of emergencies.
 
-<!-- todo gif -->
-
 ## Usage examples
 
 * If you're managing some form of service, like a webserver or Discord bot then your staff can call your cellphone if it's down.
@@ -68,6 +66,6 @@ sequenceDiagram
 
 ## Pricing
 
-As you can see in the GIF above, it does cost money because of Twilio, and it really depends on your location, the Twilio phone number's location etc. - but a free trial at Twilio will probably get you a long way already.
+It might cost a tiny little bit of money after you've used up your free trial at Twilio. The amount really depends on your location, the Twilio phone number's location etc. - but the free trial will probably get you a long way already.
 
 I think it's obvious enough... but I will not pay for your phone number.
