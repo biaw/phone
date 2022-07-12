@@ -11,7 +11,7 @@ on:
   repository_dispatch:
 
 jobs:
-  worker:
+  build:
     name: Build
     runs-on: ubuntu-latest
 
@@ -46,9 +46,19 @@ jobs:
       run: npm run build
       if: steps.cache-build.outputs.cache-hit != 'true'
 
+  publish:
+    name: Publish
+    runs-on: ubuntu-latest
+
+    if: ${{ github.event.name != 'pull_request' }}
+    needs: build
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
     - name: Publish to Worker
       uses: cloudflare/wrangler-action@2.0.0
-      if: ${{ github.event.name != 'pull_request' }}
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
