@@ -47,9 +47,8 @@ jobs:
       if: steps.cache-build.outputs.cache-hit != 'true'
 
     - name: Publish to Worker
-      uses: cloudflare/wrangler-action@1.3.0
+      uses: cloudflare/wrangler-action@2.0.0
       if: ${{ github.event.name != 'pull_request' }}
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
-      env:
-        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        accountId: ${{ secrets.CF_ACCOUNT_ID }}
