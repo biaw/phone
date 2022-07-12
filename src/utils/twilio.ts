@@ -12,7 +12,11 @@ export async function call(message: string, statusCallback: URL): Promise<CallIn
   const body = new URLSearchParams();
   body.append("To", MY_PHONE_NUMBER);
   body.append("From", TWILIO_PHONE_NUMBER);
-  body.append("Twiml", `<Response><Say>${message}</Say></Response>`);
+  body.append("Twiml", `<Response><Say>${
+    Array<string>(3)
+      .fill(message)
+      .join("<Pause length=\"3\"/>")
+  }</Say></Response>`);
   body.append("StatusCallback", statusCallback.toString());
   ["initiated", "ringing", "answered", "completed"].forEach(status => {
     body.append("StatusCallbackEvent", status);
