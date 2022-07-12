@@ -12,7 +12,7 @@ on:
 
 jobs:
   worker:
-    name: Worker
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -48,6 +48,7 @@ jobs:
 
     - name: Publish to Worker
       uses: cloudflare/wrangler-action@1.3.0
+      if: ${{ github.event.name != 'pull_request' }}
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
       env:
