@@ -51,7 +51,6 @@ jobs:
     runs-on: ubuntu-latest
 
     if: ${{ github.event.name != 'pull_request' }}
-    needs: build
 
     steps:
     - name: Checkout repository
