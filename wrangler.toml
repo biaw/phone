@@ -1,0 +1,24 @@
+name = "phone"
+main = "./build/index.js"
+workers_dev = true
+compatibility_date = "2022-07-12"
+
+[build]
+command = "npm run build"
+
+[vars]
+# Sensitive data should be stored in the worker itself as an encrypted value... in other terms: NOT IN THIS FILE!
+# Method 1 is to use the `wrangler` command: `wrangler secret put <key>` where key is the environment variable name
+# Method 2 is to put them in through the workers dashboard
+#
+# Sensitive environment variables:
+DISCORD_ID          = "" # Your Discord application's ID
+DISCORD_PUBLIC_KEY  = "" # Your Discord application's public key
+DISCORD_TOKEN       = "" # Your Discord application's token
+TWILIO_ACCOUNT_SID  = "" # Your Twilio account SID
+TWILIO_AUTH_TOKEN   = "" # Your Twilio auth token
+TWILIO_PHONE_NUMBER = "" # The phone number you want to call from. You must own this through Twilio
+MY_PHONE_NUMBER     = "" # Your phone number
+# All sensitive variables get a default value of "" just so the worker doesn't crash
+
+FALLBACK_URL = "https://github.com/biaw/phone" # Fallback URL for when a user types the worker address

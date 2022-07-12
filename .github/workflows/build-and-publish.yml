@@ -1,0 +1,54 @@
+name: Build and publish
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+  repository_dispatch:
+
+jobs:
+  worker:
+    name: Worker
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "16.x"
+
+    - name: Restore cached modules
+      uses: actions/cache@v2
+      id: cache-packages
+      with:
+        path: node_modules
+        key: ${{ hashFiles('**/package-lock.json') }}
+
+    - name: Fallback if module cache fails
+      run: npm ci
+      if: steps.cache-packages.outputs.cache-hit != 'true'
+
+    - name: Restore cached build
+      uses: actions/cache@v2
+      id: cache-build
+      with:
+        path: build
+        key: ${{ github.sha }}
+
+    - name: Fallback if build cache fails
+      run: npm run build
+      if: steps.cache-build.outputs.cache-hit != 'true'
+
+    - name: Publish to Worker
+      uses: cloudflare/wrangler-action@1.3.0
+      with:
+        apiToken: ${{ secrets.CF_API_TOKEN }}
+      env:
+        CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}

@@ -1,0 +1,8 @@
+{
+  "include": [ "./src" ],
+  "extends": "@tsconfig/node16-strictest-esm",
+  "compilerOptions": {
+    "outDir": "./build",
+    "types": ["@cloudflare/workers-types"]
+  }
+}
