@@ -9,7 +9,7 @@ addEventListener("fetch", event => {
 
   // routes for the owner
   if (method === "GET" && url.pathname === "/update-commands") return event.respondWith(handleUpdateCommands(event.request).then(logResponse));
-  if (method === "GET" && url.password === "/invite") return event.respondWith(logResponse(sendInvite()));
+  if (method === "GET" && url.pathname === "/invite") return event.respondWith(logResponse(sendInvite()));
 
   // routes for APIs
   if (method === "POST" && url.pathname === "/call-updates") return event.respondWith(handleCallStatusUpdate(event.request).then(logResponse));
