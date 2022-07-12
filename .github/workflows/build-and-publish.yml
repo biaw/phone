@@ -57,7 +57,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Publish to Worker
+    - name: Set up node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "16.x"
+
+    - name: Restore cached modules
+      uses: actions/cache@v2
+      id: cache-packages
+      with:
+        path: node_modules
+        key: ${{ hashFiles('**/package-lock.json') }}
+
+    - name: Fallback if module cache fails
+      run: npm ci
+      if: steps.cache-packages.outputs.cache-hit != 'true'
+
+    - name: Build and Publish to Worker
       uses: cloudflare/wrangler-action@2.0.0
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
