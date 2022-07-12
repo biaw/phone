@@ -18,7 +18,7 @@ addEventListener("fetch", event => {
     /* eslint-enable @typescript-eslint/no-unused-expressions */
   } catch (err) {
     // eslint-disable-next-line no-console
-    return event.respondWith(new Response("Invalid environment variables", { status: 500 }));
+    return event.respondWith(logResponse(new Response("Invalid environment variables", { status: 500 })));
   }
 
   const { method } = event.request;
