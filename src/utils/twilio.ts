@@ -15,7 +15,7 @@ export async function call(message: string, statusCallback: URL): Promise<CallIn
   body.append("Twiml", `<Response><Say>${
     Array<string>(3)
       .fill(message)
-      .join("<Pause length=\"3\"/>")
+      .join("</Say><Pause length=\"3\"/><Say>")
   }</Say></Response>`);
   body.append("StatusCallback", statusCallback.toString());
   ["initiated", "ringing", "answered", "completed"].forEach(status => {
