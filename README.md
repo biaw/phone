@@ -29,40 +29,40 @@ Generally, it's a way for other Discord members to contact you through your phon
 
 ```mermaid
 sequenceDiagram
-    autonumber
-    participant D as Discord
-    participant W as Worker
-    participant T as Twilio
+  autonumber
+  participant D as Discord API
+  participant W as Cloudflare Worker
+  participant T as Twilio API
 
-    activate D
-    D->>W: Send an interaction
-    activate W
+  activate D
+  D->>W: Send an interaction
+  activate W
 
-    break if signature header is not valid
-        W-->>D: 401 Unauthorized
-    end
+  alt signature header is not valid
+    W-->>D: 401 Unauthorized
+  end
 
-    W->>T: Send call request
+  W->>T: Send call request
+  activate T
+  T->>T: Calls the user
+  T-->>W: 200 OK
+  deactivate T
+  W-->>D: 200 OK (with Interaction Response)
+  deactivate D
+  deactivate W
+
+  loop until call is finished
+    T->>W: Call Status Update
     activate T
-    T->>T: Calls the user
-    T-->>W: 200 OK
-    deactivate T
-    W-->>D: 200 OK (with Interaction Response)
+    activate W
+    W->>D: Update Interaction with new status
+    activate D
+    D-->>W: 200 OK
     deactivate D
+    W-->>T: 200 OK
+    deactivate T
     deactivate W
-
-    loop until call is finished
-        T->>W: Call Status Update
-        activate T
-        activate W
-        W->>D: Update Interaction with new status
-        activate D
-        D-->>W: 200 OK
-        deactivate D
-        W-->>T: 200 OK
-        deactivate T
-        deactivate W
-    end
+  end
 ```
 
 ## Pricing
