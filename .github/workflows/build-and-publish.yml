@@ -67,7 +67,7 @@ jobs:
       id: cache-packages
       with:
         path: node_modules
-        key: ${{ hashFiles('**/package-lock.json') }}
+        key: ${{ hashFiles('package-lock.json') }}
 
     - name: Fallback if module cache fails
       run: npm ci
@@ -78,6 +78,3 @@ jobs:
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
-
-    - name: Fix cache
-      run: cd ..
