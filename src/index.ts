@@ -3,24 +3,24 @@ import handleInteractionPost from "./routes/interactionPost";
 import handleUpdateCommands from "./routes/updateCommands";
 import sendInvite from "./routes/invite";
 
-// test environment
-try {
-  /* eslint-disable @typescript-eslint/no-unused-expressions */
-  DISCORD_ID;
-  DISCORD_PUBLIC_KEY;
-  DISCORD_TOKEN;
-  TWILIO_ACCOUNT_SID;
-  TWILIO_AUTH_TOKEN;
-  TWILIO_PHONE_NUMBER;
-  MY_PHONE_NUMBER;
-  FALLBACK_URL;
-  /* eslint-enable @typescript-eslint/no-unused-expressions */
-} catch (err) {
-  // eslint-disable-next-line no-console
-  console.error(err);
-}
-
 addEventListener("fetch", event => {
+  // test environment
+  try {
+    /* eslint-disable @typescript-eslint/no-unused-expressions */
+    DISCORD_ID;
+    DISCORD_PUBLIC_KEY;
+    DISCORD_TOKEN;
+    TWILIO_ACCOUNT_SID;
+    TWILIO_AUTH_TOKEN;
+    TWILIO_PHONE_NUMBER;
+    MY_PHONE_NUMBER;
+    FALLBACK_URL;
+    /* eslint-enable @typescript-eslint/no-unused-expressions */
+  } catch (err) {
+    // eslint-disable-next-line no-console
+    return event.respondWith(new Response("Invalid environment variables", { status: 500 }));
+  }
+
   const { method } = event.request;
   const url = new URL(event.request.url);
 
