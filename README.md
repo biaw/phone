@@ -9,6 +9,14 @@
 
 A Discord application to call your phone (yes, your actual phone) through Twilio in case of emergencies.
 
+## Screenshots
+
+<details>
+  <summary>Click to see a GIF of the `/call` command in action</summary>
+  
+  ![biaw phone optimized](https://user-images.githubusercontent.com/10573728/178745844-a582e66a-9865-44cd-b6ef-15dd8ca023f6.gif)
+</details>
+
 ## Usage examples
 
 * If you're managing some form of service, like a webserver or Discord bot then your staff can call your cellphone if it's down.
