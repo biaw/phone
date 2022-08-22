@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@tsndr/cloudflare-worker-jwt": "2.0.1",
-    "discord-api-types": "0.37.3"
+    "discord-api-types": "0.37.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "3.14.1",
