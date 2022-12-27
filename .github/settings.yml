@@ -4,6 +4,7 @@ repository:
   name: phone
   description: "A Discord application to call your cellphone through Twilio in case of emergencies. Built with Cloudflare Workers"
   private: false
+  topics: "discord, discord-bot, discord-rest, discord-interactions, cloudflare, cf-worker, cf-workers, cloudflare-worker, cloudflare-workers, twilio, twilio-caller"
 
 branches:
   - name: main
