@@ -1,0 +1,19 @@
+_extends: .github
+
+repository:
+  name: phone
+  description: "A Discord application to call your cellphone through Twilio in case of emergencies. Built with Cloudflare Workers"
+  private: false
+
+branches:
+  - name: main
+    protection:
+      required_status_checks:
+        checks:
+          - context: CodeQL Analysis
+          - context: ESLint
+          - context: OSSAR Analysis
+          - context: NJS Scan
+          - context: DeepScan
+          - context: CodeQL
+          - context: "nodejsscan"
