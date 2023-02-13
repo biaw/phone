@@ -2,8 +2,10 @@
   "name": "phone",
   "scripts": {
     "build": "tsc",
+    "build:watch": "tsc -w",
     "deploy": "wrangler publish",
-    "lint": "eslint . --max-warnings=0",
+    "deploy:dry": "wrangler publish --dry-run",
+    "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
