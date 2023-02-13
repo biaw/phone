@@ -1,7 +1,7 @@
 name = "phone"
 main = "./build/index.js"
 workers_dev = true
-compatibility_date = "2022-07-12"
+compatibility_date = "2022-11-30"
 
 [build]
 command = "npm run build"
