@@ -1,7 +1,7 @@
 import handleCallStatusUpdate from "./routes/callStatusUpdate";
 import handleInteractionPost from "./routes/interactionPost";
-import handleUpdateCommands from "./routes/updateCommands";
 import sendInvite from "./routes/invite";
+import handleUpdateCommands from "./routes/updateCommands";
 
 addEventListener("fetch", event => {
   // test environment

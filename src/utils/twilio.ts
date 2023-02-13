@@ -2,7 +2,7 @@ import type { CallInstance } from "twilio/lib/rest/api/v2010/account/call";
 
 const token = btoa(`${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}`);
 
-export async function call(message: string, statusCallback: URL): Promise<CallInstance> {
+export default async function makeCall(message: string, statusCallback: URL): Promise<CallInstance> {
   const endpoint = `https://api.twilio.com/2010-04-01/Accounts/${TWILIO_ACCOUNT_SID}/Calls.json`;
 
   const headers = new Headers();

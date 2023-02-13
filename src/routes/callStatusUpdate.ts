@@ -1,6 +1,6 @@
 import type { CallStatus } from "twilio/lib/rest/api/v2010/account/call";
-import { decodeWebhookCredentials } from "../utils/webhookTokens";
 import { update } from "../utils/discordInteractions";
+import { decodeWebhookCredentials } from "../utils/webhookTokens";
 import { validate } from "../utils/webtoken";
 
 export default async function handleCallStatusUpdate(request: Request): Promise<Response> {

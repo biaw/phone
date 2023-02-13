@@ -1,7 +1,7 @@
 import type { APIChatInputApplicationCommandInteraction, APIInteractionResponse } from "discord-api-types/v10";
 import { ApplicationCommandOptionType } from "discord-api-types/v10";
 import { InteractionResponseType } from "discord-api-types/v9";
-import { call } from "../utils/twilio";
+import makeCall from "../utils/twilio";
 import { encodeWebhookCredentials } from "../utils/webhookTokens";
 
 export default async function callCommand(interaction: APIChatInputApplicationCommandInteraction, request: Request): Promise<APIInteractionResponse> {
@@ -12,6 +12,6 @@ export default async function callCommand(interaction: APIChatInputApplicationCo
   callbackUrl.pathname = "/call-updates";
   callbackUrl.searchParams.set("token", await encodeWebhookCredentials({ id: interaction.application_id, token: interaction.token }));
 
-  void call(`Message ${interaction.user?.username ? `from user ${interaction.user.username}` : "from unknown user"}: ${option.value}`, callbackUrl);
+  void makeCall(`Message ${interaction.user?.username ? `from user ${interaction.user.username}` : "from unknown user"}: ${option.value}`, callbackUrl);
   return { type: InteractionResponseType.DeferredChannelMessageWithSource };
 }

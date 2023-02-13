@@ -1,7 +1,7 @@
 // to avoid abuse, check if the request is from the owner by checking the key parameter against the public key
 
-import { ApplicationCommandOptionType, ApplicationCommandType, RouteBases, Routes } from "discord-api-types/v10";
 import type { RESTPutAPIApplicationCommandsJSONBody } from "discord-api-types/v10";
+import { ApplicationCommandOptionType, ApplicationCommandType, RouteBases, Routes } from "discord-api-types/v10";
 
 export default async function handleUpdateCommands(request: Request): Promise<Response> {
   const url = new URL(request.url);
