@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@cloudflare/workers-types': 4.20230115.0
-  '@tsconfig/node16-strictest-esm': 1.0.3
+  '@tsconfig/strictest': 1.0.2
   '@tsndr/cloudflare-worker-jwt': 2.2.1
   discord-api-types: 0.37.33
   discord-verify: 1.0.0
@@ -19,7 +19,7 @@ dependencies:
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230115.0
-  '@tsconfig/node16-strictest-esm': 1.0.3
+  '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
   eslint-config-promise: github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0_2bepdrichzi2p7to35qb73hy6e
   twilio: 3.84.1
@@ -499,8 +499,8 @@ packages:
       tslib: 2.5.0
     dev: true
 
-  /@tsconfig/node16-strictest-esm/1.0.3:
-    resolution: {integrity: sha512-0/QTPDkKmE2dy0dMRstPCv4VJ+gUGgvMKzaWd5P3hgdlmPqYqe1pJxDGUlNYbSgUBlncIvvX+mIeZarokysNgg==}
+  /@tsconfig/strictest/1.0.2:
+    resolution: {integrity: sha512-IRKlC8cnP7zMz1SDBjyIVyPapkEGWLZ6wkF6Z8T+xU80P9sO5uGXlIUvtzjx+7ehPJRWxkB6CeIDwUfyqNtYkQ==}
     dev: true
 
   /@tsndr/cloudflare-worker-jwt/2.2.1:
