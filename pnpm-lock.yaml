@@ -4,7 +4,7 @@ specifiers:
   '@cloudflare/workers-types': 4.20230115.0
   '@tsconfig/strictest': 1.0.2
   '@tsndr/cloudflare-worker-jwt': 2.2.1
-  discord-api-types: 0.37.33
+  discord-api-types: 0.37.34
   discord-verify: 1.0.0
   eslint: 8.34.0
   eslint-config-promise: github:promise/eslint-config
@@ -14,14 +14,14 @@ specifiers:
 
 dependencies:
   '@tsndr/cloudflare-worker-jwt': 2.2.1
-  discord-api-types: 0.37.33
+  discord-api-types: 0.37.34
   discord-verify: 1.0.0
 
 devDependencies:
   '@cloudflare/workers-types': 4.20230115.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
-  eslint-config-promise: github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0_2bepdrichzi2p7to35qb73hy6e
+  eslint-config-promise: github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8_2bepdrichzi2p7to35qb73hy6e
   twilio: 3.84.1
   typescript: 4.9.5
   wrangler: 2.9.1
@@ -949,8 +949,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types/0.37.33:
-    resolution: {integrity: sha512-ZMH5RU3q1pvYS+2wGUJ5Zvy8jMGTQ4wCpbDlIQDkbIL/k6kJwBPsXnCg81g2GywlOuf0f8ezakxVSe+sZuY6ig==}
+  /discord-api-types/0.37.34:
+    resolution: {integrity: sha512-3sX2QMX2vLjT93n6+c1rN6lM6qWHycjYol6x/ls6U5hbZPdGH00dRMjg2csF58ISMf7DGV/6inDKgY1u5niWhA==}
     dev: false
 
   /discord-verify/1.0.0:
@@ -2840,14 +2840,14 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0_2bepdrichzi2p7to35qb73hy6e:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/9307ff5e449b35860442e75b6555f5c3187b20c0}
-    id: github.com/promise/eslint-config/9307ff5e449b35860442e75b6555f5c3187b20c0
+  github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8_2bepdrichzi2p7to35qb73hy6e:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8e00970f6c563e7dae718b912faea526d45532f8}
+    id: github.com/promise/eslint-config/8e00970f6c563e7dae718b912faea526d45532f8
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
-      '@typescript-eslint/eslint-plugin': ^5.51.0
-      '@typescript-eslint/parser': ^5.51.0
+      '@typescript-eslint/eslint-plugin': ^5.52.0
+      '@typescript-eslint/parser': ^5.52.0
       eslint: ^8.34.0
       eslint-import-resolver-typescript: ^3.5.3
       eslint-plugin-import: ^2.27.5
