@@ -14,7 +14,7 @@
     "discord-verify": "1.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20230115.0",
+    "@cloudflare/workers-types": "4.20230214.0",
     "@tsconfig/strictest": "1.0.2",
     "eslint": "8.34.0",
     "eslint-config-promise": "github:promise/eslint-config",
