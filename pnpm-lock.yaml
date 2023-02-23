@@ -8,7 +8,7 @@ specifiers:
   discord-verify: 1.0.0
   eslint: 8.34.0
   eslint-config-promise: github:promise/eslint-config
-  twilio: 3.84.1
+  twilio: 4.8.0
   typescript: 4.9.5
   wrangler: 2.11.0
 
@@ -21,8 +21,8 @@ devDependencies:
   '@cloudflare/workers-types': 4.20230221.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
-  eslint-config-promise: github.com/promise/eslint-config/2719e1d7cd5b4cfbadcc5e04834a52401e972f6e_2bepdrichzi2p7to35qb73hy6e
-  twilio: 3.84.1
+  eslint-config-promise: github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50_2bepdrichzi2p7to35qb73hy6e
+  twilio: 4.8.0
   typescript: 4.9.5
   wrangler: 2.11.0
 
@@ -763,10 +763,6 @@ packages:
       es-abstract: 1.21.1
       es-shim-unscopables: 1.0.0
       get-intrinsic: 1.2.0
-    dev: true
-
-  /asap/2.0.6:
-    resolution: {integrity: sha512-BSHWgDSAiKs50o2Re8ppvp3seVHXSRM44cdSsT9FfNEUUZLOGWVCsiWaRPWM1Znn+mqZ1OfVZ3z3DWEzSp7hRA==}
     dev: true
 
   /available-typed-arrays/1.0.5:
@@ -1864,20 +1860,14 @@ packages:
       minimist: 1.2.8
     dev: true
 
-  /jsonwebtoken/8.5.1:
-    resolution: {integrity: sha512-XjwVfRS6jTMsqYs0EsuJ4LGxXV14zQybNd4L2r0UvbVnSF9Af8x7p5MzbJ90Ioz/9TI41/hTCvznF/loiSzn8w==}
-    engines: {node: '>=4', npm: '>=1.4.28'}
+  /jsonwebtoken/9.0.0:
+    resolution: {integrity: sha512-tuGfYXxkQGDPnLJ7SibiQgVgeDgfbPq2k2ICcbgqW8WxWLBAxKQM/ZCu/IT8SOSwmaYl4dpTFCW5xZv7YbbWUw==}
+    engines: {node: '>=12', npm: '>=6'}
     dependencies:
       jws: 3.2.2
-      lodash.includes: 4.3.0
-      lodash.isboolean: 3.0.3
-      lodash.isinteger: 4.0.4
-      lodash.isnumber: 3.0.3
-      lodash.isplainobject: 4.0.6
-      lodash.isstring: 4.0.1
-      lodash.once: 4.1.1
+      lodash: 4.17.21
       ms: 2.1.2
-      semver: 5.7.1
+      semver: 7.3.8
     dev: true
 
   /jsx-ast-utils/3.3.3:
@@ -1923,36 +1913,8 @@ packages:
       p-locate: 5.0.0
     dev: true
 
-  /lodash.includes/4.3.0:
-    resolution: {integrity: sha512-W3Bx6mdkRTGtlJISOvVD/lbqjTlPPUDTMnlXZFnVwi9NKJ6tiAk6LVdlhZMm17VZisqhKcgzpO5Wz91PCt5b0w==}
-    dev: true
-
-  /lodash.isboolean/3.0.3:
-    resolution: {integrity: sha512-Bz5mupy2SVbPHURB98VAcw+aHh4vRV5IPNhILUCsOzRmsTmSQ17jIuqopAentWoehktxGd9e/hbIXq980/1QJg==}
-    dev: true
-
-  /lodash.isinteger/4.0.4:
-    resolution: {integrity: sha512-DBwtEWN2caHQ9/imiNeEA5ys1JoRtRfY3d7V9wkqtbycnAmTvRRmbHKDV4a0EYc678/dia0jrte4tjYwVBaZUA==}
-    dev: true
-
-  /lodash.isnumber/3.0.3:
-    resolution: {integrity: sha512-QYqzpfwO3/CWf3XP+Z+tkQsfaLL/EnUlXWVkIk5FUPc4sBdTehEqZONuyRt2P67PXAk+NXmTBcc97zw9t1FQrw==}
-    dev: true
-
-  /lodash.isplainobject/4.0.6:
-    resolution: {integrity: sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==}
-    dev: true
-
-  /lodash.isstring/4.0.1:
-    resolution: {integrity: sha512-0wJxfxH1wgO3GrbuP+dTTk7op+6L41QCXbGINEmD+ny/G/eCqGzxyCsh7159S+mgDDcoarnBw6PC1PS5+wUGgw==}
-    dev: true
-
   /lodash.merge/4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-    dev: true
-
-  /lodash.once/4.1.1:
-    resolution: {integrity: sha512-Sb487aTOCr9drQVL8pIxOzVhafOjZN9UU54hiN8PU3uAiSV7lx1yYNpbNmex2PK6dSJoNTSJUUswT651yww3Mg==}
     dev: true
 
   /lodash/4.17.21:
@@ -2267,10 +2229,6 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /pop-iterate/1.0.1:
-    resolution: {integrity: sha512-HRCx4+KJE30JhX84wBN4+vja9bNfysxg1y28l0DuJmkoaICiv2ZSilKddbS48pq50P8d2erAhqDLbp47yv3MbQ==}
-    dev: true
-
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
@@ -2287,14 +2245,6 @@ packages:
   /punycode/2.3.0:
     resolution: {integrity: sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA==}
     engines: {node: '>=6'}
-    dev: true
-
-  /q/2.0.3:
-    resolution: {integrity: sha512-gv6vLGcmAOg96/fgo3d9tvA4dJNZL3fMyBqVRrGxQ+Q/o4k9QzbJ3NQF9cOO/71wRodoXhaPgphvMFU68qVAJQ==}
-    dependencies:
-      asap: 2.0.6
-      pop-iterate: 1.0.1
-      weak-map: 1.0.8
     dev: true
 
   /qs/6.11.0:
@@ -2397,10 +2347,6 @@ packages:
       estree-walker: 0.6.1
     dev: true
 
-  /rootpath/0.1.2:
-    resolution: {integrity: sha512-R3wLbuAYejpxQjL/SjXo1Cjv4wcJECnMRT/FlcCfTwCBhaji9rWaRCoVEQ1SPiTJ4kKK+yh+bZLAV7SCafoDDw==}
-    dev: true
-
   /run-parallel/1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
@@ -2433,11 +2379,6 @@ packages:
   /semiver/1.1.0:
     resolution: {integrity: sha512-QNI2ChmuioGC1/xjyYwyZYADILWyW6AmS1UH6gDj/SFUUUS4MBAWs/7mxnkRPc/F4iHezDP+O8t0dO8WHiEOdg==}
     engines: {node: '>=6'}
-    dev: true
-
-  /semver/5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
-    hasBin: true
     dev: true
 
   /semver/6.3.0:
@@ -2643,18 +2584,15 @@ packages:
       typescript: 4.9.5
     dev: true
 
-  /twilio/3.84.1:
-    resolution: {integrity: sha512-Q/xaPoayTj+bgJdnUgpE+EiB/VoNOG+byDFdlDej0FgxiHLgXKliZfVv6boqHPWvC1k7Dt0AK96OBFZ0P55QQg==}
-    engines: {node: '>=6.0'}
+  /twilio/4.8.0:
+    resolution: {integrity: sha512-jJaEyFGIiIAIfAWyq94g3uo2odTyo2opRN8hzpDHpbA4SYDfhxmm4E+Z0c7AP41HEdxzDyCwMkLNXh6fBpWRiw==}
+    engines: {node: '>=14.0'}
     dependencies:
       axios: 0.26.1
       dayjs: 1.11.7
       https-proxy-agent: 5.0.1
-      jsonwebtoken: 8.5.1
-      lodash: 4.17.21
-      q: 2.0.3
+      jsonwebtoken: 9.0.0
       qs: 6.11.0
-      rootpath: 0.1.2
       scmp: 2.1.0
       url-parse: 1.5.10
       xmlbuilder: 13.0.2
@@ -2727,10 +2665,6 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       builtins: 5.0.1
-    dev: true
-
-  /weak-map/1.0.8:
-    resolution: {integrity: sha512-lNR9aAefbGPpHO7AEnY0hCFjz1eTkWCXYvkTRrTHs9qv8zJp+SkVYpzfLIFXQQiG3tVvbNFQgVg2bQS8YGgxyw==}
     dev: true
 
   /which-boxed-primitive/1.0.2:
@@ -2842,9 +2776,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/2719e1d7cd5b4cfbadcc5e04834a52401e972f6e_2bepdrichzi2p7to35qb73hy6e:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/2719e1d7cd5b4cfbadcc5e04834a52401e972f6e}
-    id: github.com/promise/eslint-config/2719e1d7cd5b4cfbadcc5e04834a52401e972f6e
+  github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50_2bepdrichzi2p7to35qb73hy6e:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/cf4a665fe0d671fdf9d34981ca35dac375ae3d50}
+    id: github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
