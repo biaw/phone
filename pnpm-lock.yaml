@@ -10,7 +10,7 @@ specifiers:
   eslint-config-promise: github:promise/eslint-config
   twilio: 4.8.0
   typescript: 4.9.5
-  wrangler: 2.11.0
+  wrangler: 2.11.1
 
 dependencies:
   '@tsndr/cloudflare-worker-jwt': 2.2.1
@@ -21,10 +21,10 @@ devDependencies:
   '@cloudflare/workers-types': 4.20230221.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.34.0
-  eslint-config-promise: github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50_2bepdrichzi2p7to35qb73hy6e
+  eslint-config-promise: github.com/promise/eslint-config/d9470d4d5b60b39309a45dba093c36f1fd4918f0_2bepdrichzi2p7to35qb73hy6e
   twilio: 4.8.0
   typescript: 4.9.5
-  wrangler: 2.11.0
+  wrangler: 2.11.1
 
 packages:
 
@@ -2702,8 +2702,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /wrangler/2.11.0:
-    resolution: {integrity: sha512-JvqWL8YyzLZsQhWgcCoDJkh47K7PdYH58LbE+7bDtMugkTzDEj0PS8aoJDEUw+5NDHhtoP2TMize44YVdnHgpw==}
+  /wrangler/2.11.1:
+    resolution: {integrity: sha512-WtFL3a5dGri74iQR2BE52DIt38Adgg5aPyXldEKU5OFzwRhYKq5LmGWuEI+fGrWpTjJ+WqAk9u6VAdQ1w9lPfw==}
     engines: {node: '>=16.13.0'}
     hasBin: true
     dependencies:
@@ -2776,9 +2776,9 @@ packages:
       stack-trace: 0.0.10
     dev: true
 
-  github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50_2bepdrichzi2p7to35qb73hy6e:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/cf4a665fe0d671fdf9d34981ca35dac375ae3d50}
-    id: github.com/promise/eslint-config/cf4a665fe0d671fdf9d34981ca35dac375ae3d50
+  github.com/promise/eslint-config/d9470d4d5b60b39309a45dba093c36f1fd4918f0_2bepdrichzi2p7to35qb73hy6e:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/d9470d4d5b60b39309a45dba093c36f1fd4918f0}
+    id: github.com/promise/eslint-config/d9470d4d5b60b39309a45dba093c36f1fd4918f0
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
