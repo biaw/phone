@@ -22,6 +22,6 @@ export default async function makeCall(message: string, statusCallback: URL): Pr
     body.append("StatusCallbackEvent", status);
   });
 
-  const response = await fetch(endpoint, { method: "POST", headers, body, cf: { cacheTtl: 0 }});
+  const response = await fetch(endpoint, { method: "POST", headers, body, cf: { cacheTtl: 0 } });
   return response.json();
 }
