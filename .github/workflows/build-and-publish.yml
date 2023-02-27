@@ -21,20 +21,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
 
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 7
+
     - name: Set up node
       uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
       with:
         node-version-file: ".nvmrc"
-
-    - name: Set up pnpm
-      uses: pnpm/action-setup@v2
-      id: pnpm-install
-      with:
-        version: 7
-        run_install: false
+        cache: "pnpm"
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
 
     - name: Test worker build
       uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # tag=2.0.0
@@ -53,20 +52,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
 
+    - name: Set up pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 7
+
     - name: Set up node
       uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
       with:
         node-version-file: ".nvmrc"
-
-    - name: Set up pnpm
-      uses: pnpm/action-setup@v2
-      id: pnpm-install
-      with:
-        version: 7
-        run_install: false
+        cache: "pnpm"
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
 
     - name: Publish to Worker
       uses: cloudflare/wrangler-action@4c10c1822abba527d820b29e6333e7f5dac2cabd # tag=2.0.0
