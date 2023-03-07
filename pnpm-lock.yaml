@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@cloudflare/workers-types': 4.20230228.0
+  '@cloudflare/workers-types': 4.20230307.0
   '@tsconfig/strictest': 1.0.2
   '@tsndr/cloudflare-worker-jwt': 2.2.1
   discord-api-types: 0.37.35
@@ -18,7 +18,7 @@ dependencies:
   discord-verify: 1.0.0
 
 devDependencies:
-  '@cloudflare/workers-types': 4.20230228.0
+  '@cloudflare/workers-types': 4.20230307.0
   '@tsconfig/strictest': 1.0.2
   eslint: 8.35.0
   eslint-config-promise: github.com/promise/eslint-config/11a8241a86c521bed62c0c4551bb30ca6962fc3d_kxxj7ovrjyqwqhfbjkojlpranq
@@ -34,8 +34,8 @@ packages:
       mime: 3.0.0
     dev: true
 
-  /@cloudflare/workers-types/4.20230228.0:
-    resolution: {integrity: sha512-tDaqH3DrKmDoe/YrCnzVSqjNH6GnUOOajv2Ztj2h7BPLFyYTb81iCkARgb+G4bpxhn7y4f1KxxDT2+Yp4rt7Hg==}
+  /@cloudflare/workers-types/4.20230307.0:
+    resolution: {integrity: sha512-Go968aDDcqONHQcUdgIiPRkPdT4QTzD0ecHJsI1u7ZiHPMOoZn+Dy7hYsdUJ5ldX9wTZDrICBM1rDKTRaDUitg==}
     dev: true
 
   /@esbuild-plugins/node-globals-polyfill/0.1.1_esbuild@0.16.3:
