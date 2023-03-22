@@ -8,7 +8,7 @@ specifiers:
   discord-verify: 1.0.0
   eslint: 8.36.0
   eslint-config-promise: github:promise/eslint-config
-  twilio: 4.8.0
+  twilio: 4.9.0
   typescript: 4.9.5
   wrangler: 2.13.0
 
@@ -22,7 +22,7 @@ devDependencies:
   '@tsconfig/strictest': 1.0.2
   eslint: 8.36.0
   eslint-config-promise: github.com/promise/eslint-config/9e4e8426244dfe070d349df1219942ae3ad0f080_af74gqs66hrpo4afpw2vbfddc4
-  twilio: 4.8.0
+  twilio: 4.9.0
   typescript: 4.9.5
   wrangler: 2.13.0
 
@@ -2589,8 +2589,8 @@ packages:
       typescript: 4.9.5
     dev: true
 
-  /twilio/4.8.0:
-    resolution: {integrity: sha512-jJaEyFGIiIAIfAWyq94g3uo2odTyo2opRN8hzpDHpbA4SYDfhxmm4E+Z0c7AP41HEdxzDyCwMkLNXh6fBpWRiw==}
+  /twilio/4.9.0:
+    resolution: {integrity: sha512-bP8tQ/DmT9NeOGayhveryG2EppwK7OPIli5Ll7CuU+NXEtmIIAPq4G8jEJy9AJ2BCONmxGiMIZ4vHGxix8WTbQ==}
     engines: {node: '>=14.0'}
     dependencies:
       axios: 0.26.1
