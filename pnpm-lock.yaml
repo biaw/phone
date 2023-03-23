@@ -4,7 +4,7 @@ specifiers:
   '@cloudflare/workers-types': 4.20230321.0
   '@tsconfig/strictest': 1.0.2
   '@tsndr/cloudflare-worker-jwt': 2.2.1
-  discord-api-types: 0.37.36
+  discord-api-types: 0.37.37
   discord-verify: 1.0.0
   eslint: 8.36.0
   eslint-config-promise: github:promise/eslint-config
@@ -14,7 +14,7 @@ specifiers:
 
 dependencies:
   '@tsndr/cloudflare-worker-jwt': 2.2.1
-  discord-api-types: 0.37.36
+  discord-api-types: 0.37.37
   discord-verify: 1.0.0
 
 devDependencies:
@@ -965,8 +965,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types/0.37.36:
-    resolution: {integrity: sha512-Nlxmp10UpVr/utgZ9uODQvG2Or+5w7LFrvFMswyeKC9l/+UaqGT6H0OVgEFhu9GEO4U6K7NNO5W8Carv7irnCA==}
+  /discord-api-types/0.37.37:
+    resolution: {integrity: sha512-LDMBKzl/zbvHO/yCzno5hevuA6lFIXJwdKSJZQrB+1ToDpFfN9thK+xxgZNR4aVkI7GHRDja0p4Sl2oYVPnHYg==}
     dev: false
 
   /discord-verify/1.0.0:
