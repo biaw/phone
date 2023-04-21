@@ -8,8 +8,8 @@ dependencies:
     specifier: 0.37.39
     version: 0.37.39
   discord-verify:
-    specifier: 1.0.2
-    version: 1.0.2
+    specifier: 1.0.3
+    version: 1.0.3
 
 devDependencies:
   '@cloudflare/workers-types':
@@ -1032,8 +1032,8 @@ packages:
     resolution: {integrity: sha512-hkhQsQyzsTJITp311WXvHZh9j4RAMfIk2hPmsWeOTN50QTpg6zqmJNfel9D/8lYNvsU01wzw9281Yke8NhYyHg==}
     dev: false
 
-  /discord-verify@1.0.2:
-    resolution: {integrity: sha512-kLIrLp7+dME8HOHhbZnU9wcKm3R5aN+uK1/4LfflbBtag+rm7ryRspByTeV59hfSxjSTuuTk3K6Uf7xUpRKy8w==}
+  /discord-verify@1.0.3:
+    resolution: {integrity: sha512-j7ZJNKMpmdqfpWoy1NjJBN7UAVpNmT1ZOyDB+TPGE5XAXgZazn0A9TMNO8KdGA6vXnaRpmIZsQIP3xeWw5G/gQ==}
     engines: {node: '>=16'}
     dependencies:
       '@types/express': 4.17.17
