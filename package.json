@@ -18,7 +18,7 @@
     "@tsconfig/strictest": "2.0.1",
     "eslint": "8.46.0",
     "eslint-config-promise": "github:promise/eslint-config",
-    "twilio": "4.14.1",
+    "twilio": "4.15.0",
     "typescript": "5.1.6",
     "wrangler": "3.5.0"
   },
