@@ -9,8 +9,8 @@ dependencies:
     specifier: 2.2.1
     version: 2.2.1
   discord-api-types:
-    specifier: 0.37.52
-    version: 0.37.52
+    specifier: 0.37.53
+    version: 0.37.53
   discord-verify:
     specifier: 1.2.0
     version: 1.2.0
@@ -27,7 +27,7 @@ devDependencies:
     version: 8.47.0
   eslint-config-promise:
     specifier: github:promise/eslint-config
-    version: github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.47.0)
+    version: github.com/promise/eslint-config/8ff0b4db442f24a3635c82dc8d678fa4f08ebe36(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.47.0)
   twilio:
     specifier: 4.15.0
     version: 4.15.0
@@ -663,7 +663,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dependencies:
       '@typescript-eslint/types': 5.62.0
-      eslint-visitor-keys: 3.4.2
+      eslint-visitor-keys: 3.4.3
     dev: true
 
   /@typescript-eslint/visitor-keys@6.3.0:
@@ -671,7 +671,7 @@ packages:
     engines: {node: ^16.0.0 || >=18.0.0}
     dependencies:
       '@typescript-eslint/types': 6.3.0
-      eslint-visitor-keys: 3.4.2
+      eslint-visitor-keys: 3.4.3
     dev: true
 
   /acorn-jsx@5.3.2(acorn@8.9.0):
@@ -1026,8 +1026,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.52:
-    resolution: {integrity: sha512-TP99aMgY6rHuDIy056GDm1j2nGOcaLbFpjVbvAmv6N6vhkjHNqHXCHVqKtGisaQ8D15slbxTHNl/SSkPdx2syg==}
+  /discord-api-types@0.37.53:
+    resolution: {integrity: sha512-N6uUgv50OyP981Mfxrrt0uxcqiaNr0BDaQIoqfk+3zM2JpZtwU9v7ce1uaFAP53b2xSDvcbrk80Kneui6XJgGg==}
     dev: false
 
   /discord-verify@1.2.0:
@@ -1289,11 +1289,6 @@ packages:
     dependencies:
       esrecurse: 4.3.0
       estraverse: 5.3.0
-    dev: true
-
-  /eslint-visitor-keys@3.4.2:
-    resolution: {integrity: sha512-8drBzUEyZ2llkpCA67iYrgEssKDUu68V8ChqqOfFupIaG/LCVPUT+CoGJpT77zJprs4T/W7p07LP7zAIMuweVw==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
   /eslint-visitor-keys@3.4.3:
@@ -2804,15 +2799,15 @@ packages:
     resolution: {integrity: sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==}
     dev: true
 
-  github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.47.0):
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8465168d478a90004c4897ee20f0030543c01d05}
-    id: github.com/promise/eslint-config/8465168d478a90004c4897ee20f0030543c01d05
+  github.com/promise/eslint-config/8ff0b4db442f24a3635c82dc8d678fa4f08ebe36(@typescript-eslint/eslint-plugin@6.3.0)(@typescript-eslint/parser@6.3.0)(eslint-plugin-i@2.27.5)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.1)(eslint@8.47.0):
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8ff0b4db442f24a3635c82dc8d678fa4f08ebe36}
+    id: github.com/promise/eslint-config/8ff0b4db442f24a3635c82dc8d678fa4f08ebe36
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^6.3.0
       '@typescript-eslint/parser': ^6.3.0
-      eslint: ^8.46.0
+      eslint: ^8.47.0
       eslint-plugin-i: 2.27.5
       eslint-plugin-jest: ^27.2.3
       eslint-plugin-react: ^7.33.1
