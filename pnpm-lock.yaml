@@ -19,6 +19,9 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: 4.20230821.0
     version: 4.20230821.0
+  '@tsconfig/esm':
+    specifier: 1.0.4
+    version: 1.0.4
   '@tsconfig/strictest':
     specifier: 2.0.1
     version: 2.0.1
@@ -392,6 +395,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+    dev: true
+
+  /@tsconfig/esm@1.0.4:
+    resolution: {integrity: sha512-bix9CWljCxyD06nGQRDYdmTw0wevvEDyrLKjbDocGV31JQYbfqqgMV1yFeJ9aDgorKQ9yDLrak8poiggsB5Liw==}
     dev: true
 
   /@tsconfig/strictest@2.0.1:
