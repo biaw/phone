@@ -1,8 +1,12 @@
 {
   "include": [ "./src" ],
-  "extends": ["@tsconfig/esm", "@tsconfig/strictest"],
+  "extends": "@tsconfig/strictest",
   "compilerOptions": {
     "outDir": "./build",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ESNext"],
     "types": ["@cloudflare/workers-types/2022-11-30"]
   }
 }
