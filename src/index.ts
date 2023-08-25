@@ -3,7 +3,7 @@ import handleInteractionPost from "./routes/interactionPost";
 import sendInvite from "./routes/invite";
 import handleUpdateCommands from "./routes/updateCommands";
 
-addEventListener("fetch", event => {
+addEventListener("fetch", (event: FetchEvent) => {
   // test environment
   try {
     /* eslint-disable @typescript-eslint/no-unused-expressions */
