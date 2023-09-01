@@ -27,7 +27,7 @@ devDependencies:
     version: 8.48.0
   eslint-config-promise:
     specifier: github:promise/eslint-config
-    version: github.com/promise/eslint-config/8477b47b7d195dd8c45941994bc348259aeff251(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint-plugin-i@2.28.0)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.2)(eslint@8.48.0)
+    version: github.com/promise/eslint-config/e2172bd3845dd903fdcfe935b52924f14d080f7f(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint-plugin-i@2.28.0)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.2)(eslint@8.48.0)
   twilio:
     specifier: 4.16.0
     version: 4.16.0
@@ -2998,9 +2998,9 @@ packages:
     resolution: {integrity: sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==}
     dev: true
 
-  github.com/promise/eslint-config/8477b47b7d195dd8c45941994bc348259aeff251(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint-plugin-i@2.28.0)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.2)(eslint@8.48.0):
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/8477b47b7d195dd8c45941994bc348259aeff251}
-    id: github.com/promise/eslint-config/8477b47b7d195dd8c45941994bc348259aeff251
+  github.com/promise/eslint-config/e2172bd3845dd903fdcfe935b52924f14d080f7f(@typescript-eslint/eslint-plugin@6.5.0)(@typescript-eslint/parser@6.5.0)(eslint-plugin-i@2.28.0)(eslint-plugin-jest@27.2.3)(eslint-plugin-react@7.33.2)(eslint@8.48.0):
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/e2172bd3845dd903fdcfe935b52924f14d080f7f}
+    id: github.com/promise/eslint-config/e2172bd3845dd903fdcfe935b52924f14d080f7f
     name: eslint-config-promise
     version: 0.0.0
     peerDependencies:
