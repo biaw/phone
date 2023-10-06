@@ -16,7 +16,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "4.20231002.0",
     "@tsconfig/strictest": "2.0.2",
-    "eslint": "8.50.0",
+    "eslint": "8.51.0",
     "eslint-config-promise": "github:promise/eslint-config",
     "twilio": "4.18.1",
     "typescript": "5.2.2",
