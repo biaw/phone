@@ -9,8 +9,8 @@ dependencies:
     specifier: 2.2.5
     version: 2.2.5
   discord-api-types:
-    specifier: 0.37.60
-    version: 0.37.60
+    specifier: 0.37.61
+    version: 0.37.61
   discord-verify:
     specifier: 1.2.0
     version: 1.2.0
@@ -1056,8 +1056,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /discord-api-types@0.37.60:
-    resolution: {integrity: sha512-5BELXTsv7becqVHrD81nZrqT4oEyXXWBwbsO/kwDDu6X3u19VV1tYDB5I5vaVAK+c1chcDeheI9zACBLm41LiQ==}
+  /discord-api-types@0.37.61:
+    resolution: {integrity: sha512-o/dXNFfhBpYHpQFdT6FWzeO7pKc838QeeZ9d91CfVAtpr5XLK4B/zYxQbYgPdoMiTDvJfzcsLW5naXgmHGDNXw==}
     dev: false
 
   /discord-verify@1.2.0:
