@@ -12,8 +12,8 @@ on:
 
 jobs:
   build:
-    name: Test build
-    runs-on: ubuntu-latest
+    name: ${{ github.ref == 'refs/heads/main' && 'Publish' || 'Test build' }}
+    runs-on: self-hosted
 
     if: ${{ github.event_name == 'pull_request' }}
 
@@ -30,44 +30,13 @@ jobs:
       uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
       with:
         node-version-file: ".nvmrc"
-        cache: "pnpm"
 
     - name: Install dependencies
       run: pnpm install --frozen-lockfile
 
-    - name: Test worker build
+    - name: ${{ github.ref == 'refs/heads/main' && 'Build ans publish' || 'Test worker build' }}
       uses: cloudflare/wrangler-action@5e8484995321734668f14981c316aa9188d76ed1 # v3.3.2
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
-        publish: false
-
-  publish:
-    name: Publish
-    runs-on: ubuntu-latest
-
-    if: ${{ github.event_name != 'pull_request' }}
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
-
-    - name: Set up pnpm
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-
-    - name: Set up node
-      uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4
-      with:
-        node-version-file: ".nvmrc"
-        cache: "pnpm"
-
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-
-    - name: Publish to Worker
-      uses: cloudflare/wrangler-action@5e8484995321734668f14981c316aa9188d76ed1 # v3.3.2
-      with:
-        apiToken: ${{ secrets.CF_API_TOKEN }}
-        accountId: ${{ secrets.CF_ACCOUNT_ID }}
+        command: ${{ github.ref == 'refs/heads/main' && 'deploy' || 'deploy --dry-run' }}
