@@ -32,7 +32,7 @@ addEventListener("fetch", (event: FetchEvent) => {
   if (method === "POST" && url.pathname === "/call-updates") return event.respondWith(handleCallStatusUpdate(event.request).then(logResponse));
   if (method === "POST" && url.pathname === "/interaction") return event.respondWith(handleInteractionPost(event.request).then(logResponse));
 
-  return event.respondWith(logResponse(Response.redirect(FALLBACK_URL)));
+  return event.respondWith(logResponse(Response.redirect(FALLBACK_URL, 307)));
 });
 
 function logResponse(response: Response): Response {

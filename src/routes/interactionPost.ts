@@ -6,11 +6,11 @@ import { respond } from "../utils/discordInteractions";
 
 export default async function handleInteractionPost(request: Request): Promise<Response> {
   // check and validate headers
-  if (!request.headers.get("X-Signature-Ed25519") || !request.headers.get("X-Signature-Timestamp")) return Response.redirect(FALLBACK_URL);
+  if (!request.headers.get("X-Signature-Ed25519") || !request.headers.get("X-Signature-Timestamp")) return Response.redirect(FALLBACK_URL, 307);
   if (!await isValidRequest(request, DISCORD_PUBLIC_KEY, PlatformAlgorithm.Cloudflare)) return new Response("", { status: 401 });
 
   // parse request body
-  const interaction: APIApplicationCommandInteraction | APIPingInteraction = await request.json();
+  const interaction = await request.json() as APIApplicationCommandInteraction | APIPingInteraction;
 
   // if interaction is a ping, respond with a pong
   if (interaction.type === InteractionType.Ping) return respond({ type: InteractionResponseType.Pong });

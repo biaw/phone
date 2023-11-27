@@ -7,5 +7,5 @@ export default function sendInvite(): Response {
   url.searchParams.set("client_id", DISCORD_ID);
   url.searchParams.set("scope", OAuth2Scopes.ApplicationsCommands);
 
-  return Response.redirect(url.toString());
+  return Response.redirect(url.toString(), 307);
 }
