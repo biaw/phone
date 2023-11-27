@@ -23,5 +23,5 @@ export default async function makeCall(message: string, statusCallback: URL): Pr
   });
 
   const response = await fetch(endpoint, { method: "POST", headers, body, cf: { cacheTtl: 0 } });
-  return response.json();
+  return response.json() as Promise<CallInstance>;
 }

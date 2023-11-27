@@ -7,7 +7,7 @@ export default async function handleCallStatusUpdate(request: Request): Promise<
   const url = new URL(request.url);
   const token = url.searchParams.get("token");
 
-  if (!token) return Response.redirect(FALLBACK_URL);
+  if (!token) return Response.redirect(FALLBACK_URL, 307);
   if (!await validate(token)) return new Response("", { status: 400 });
 
   const credentials = decodeWebhookCredentials(token);
