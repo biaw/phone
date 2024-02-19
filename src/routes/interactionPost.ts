@@ -10,7 +10,7 @@ export default async function handleInteractionPost(request: Request): Promise<R
   if (!await isValidRequest(request, DISCORD_PUBLIC_KEY, PlatformAlgorithm.Cloudflare)) return new Response("", { status: 401 });
 
   // parse request body
-  const interaction = await request.json() as APIApplicationCommandInteraction | APIPingInteraction;
+  const interaction = await request.json<APIApplicationCommandInteraction | APIPingInteraction>();
 
   // if interaction is a ping, respond with a pong
   if (interaction.type === InteractionType.Ping) return respond({ type: InteractionResponseType.Pong });
