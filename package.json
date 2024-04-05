@@ -20,7 +20,7 @@
     "eslint-config-promise": "github:promise/eslint-config",
     "twilio": "5.0.3",
     "typescript": "5.4.4",
-    "wrangler": "3.46.0"
+    "wrangler": "3.47.1"
   },
   "eslintConfig": {
     "extends": "promise"
