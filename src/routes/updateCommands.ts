@@ -40,5 +40,5 @@ export default async function handleUpdateCommands(request: Request): Promise<Re
       if (res.status === 200) return new Response(await res.text(), { status: 200 });
       return new Response(await res.text(), { status: res.status });
     })
-    .catch(err => new Response(String(err), { status: 500 }));
+    .catch((err: unknown) => new Response(String(err), { status: 500 }));
 }
