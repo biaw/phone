@@ -35,8 +35,8 @@ devDependencies:
     specifier: 5.5.4
     version: 5.5.4
   wrangler:
-    specifier: 3.65.1
-    version: 3.65.1(@cloudflare/workers-types@4.20240722.0)
+    specifier: 3.66.0
+    version: 3.66.0(@cloudflare/workers-types@4.20240722.0)
 
 packages:
 
@@ -3467,8 +3467,8 @@ packages:
       '@cloudflare/workerd-windows-64': 1.20240718.0
     dev: true
 
-  /wrangler@3.65.1(@cloudflare/workers-types@4.20240722.0):
-    resolution: {integrity: sha512-Z5NyrbpGMQCpim/6VnI1im0/Weh5+CU1sdep1JbfFxHjn/Jt9K+MeUq+kCns5ubkkdRx2EYsusB/JKyX2JdJ4w==}
+  /wrangler@3.66.0(@cloudflare/workers-types@4.20240722.0):
+    resolution: {integrity: sha512-5fEyXsP8qvrUeR13kCfA3OG1z/ABx+/a8hzIA55nCUM2/tjI67ZkfeN1VdOmG6cipZDvs4HfN8rp7j+e+21nKA==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -3493,6 +3493,7 @@ packages:
       selfsigned: 2.4.1
       source-map: 0.6.1
       unenv: /unenv-nightly@1.10.0-1717606461.a117952
+      workerd: 1.20240718.0
       xxhash-wasm: 1.0.2
     optionalDependencies:
       fsevents: 2.3.3
