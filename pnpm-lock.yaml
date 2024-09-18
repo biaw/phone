@@ -29,8 +29,8 @@ devDependencies:
     specifier: github:promise/eslint-config
     version: github.com/promise/eslint-config/7ed5f65eb45efef9955f45ae9236c0892fc1debf(@stylistic/eslint-plugin-js@1.8.1)(@stylistic/eslint-plugin-jsx@1.8.1)(@stylistic/eslint-plugin-ts@1.8.1)(@typescript-eslint/eslint-plugin@7.18.0)(@typescript-eslint/parser@7.18.0)(eslint-plugin-i@2.29.1)(eslint-plugin-jest@27.9.0)(eslint-plugin-react@7.35.0)(eslint-plugin-tailwindcss@3.17.4)(eslint@8.57.1)
   twilio:
-    specifier: 5.3.0
-    version: 5.3.0
+    specifier: 5.3.1
+    version: 5.3.1
   typescript:
     specifier: 5.6.2
     version: 5.6.2
@@ -3259,8 +3259,8 @@ packages:
       typescript: 5.6.2
     dev: true
 
-  /twilio@5.3.0:
-    resolution: {integrity: sha512-bwveAxChPPFR2umttraRjUJdq/WY0OJCCgetzuKqLoGYqYSyYGsiFYYFAB5EOL/XnzCQNwAvq5622u+jqMTLOA==}
+  /twilio@5.3.1:
+    resolution: {integrity: sha512-angX6IpoUcoehtArCJsUqbBklw2df/FgtzjTyx9fRQU/RPZsULMEGYcs4iNqLj486Iz8cxs6iP69990F9KxCMg==}
     engines: {node: '>=14.0'}
     dependencies:
       axios: 1.7.7
