@@ -33,7 +33,7 @@ jobs:
       run: pnpm install --frozen-lockfile
 
     - name: ${{ github.ref == 'refs/heads/main' && 'Build and publish' || 'Test worker build' }}
-      uses: cloudflare/wrangler-action@39c2b5a1226e5718f92a2749a8988cce31e78a76 # v3.10.0
+      uses: cloudflare/wrangler-action@b2a0191ce60d21388e1a8dcc968b4e9966f938e1 # v3.11.0
       with:
         apiToken: ${{ secrets.CF_API_TOKEN }}
         accountId: ${{ secrets.CF_ACCOUNT_ID }}
