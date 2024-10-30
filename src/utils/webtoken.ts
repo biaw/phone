@@ -5,7 +5,7 @@ export function encode(payload: object): Promise<string> {
 }
 
 export function validate(token: string): Promise<boolean> {
-  return jwtVerify(token, DISCORD_PUBLIC_KEY).then(Boolean)
+  return jwtVerify(token, DISCORD_PUBLIC_KEY).then(Boolean);
 }
 
 export function decode<T extends object = object>(token: string): T {
