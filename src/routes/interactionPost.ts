@@ -1,6 +1,6 @@
 import type { APIApplicationCommandInteraction, APIPingInteraction } from "discord-api-types/v10";
 import { InteractionResponseType, InteractionType } from "discord-api-types/v10";
-import { PlatformAlgorithm, isValidRequest } from "discord-verify/web";
+import { isValidRequest, PlatformAlgorithm } from "discord-verify/web";
 import commandHandler from "../commands";
 import { respond } from "../utils/discordInteractions";
 

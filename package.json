@@ -22,7 +22,5 @@
     "typescript": "5.7.2",
     "wrangler": "3.94.0"
   },
-  "eslintConfig": {
-    "extends": "promise"
-  }
+  "packageManager": "pnpm@9.15.0"
 }
