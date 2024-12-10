@@ -16,8 +16,8 @@ addEventListener("fetch", (event: FetchEvent) => {
     MY_PHONE_NUMBER;
     FALLBACK_URL;
     /* eslint-enable @typescript-eslint/no-unused-expressions */
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (err) {
-    // eslint-disable-next-line no-console
     return event.respondWith(logResponse(new Response("Invalid environment variables", { status: 500 })));
   }
 

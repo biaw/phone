@@ -41,6 +41,9 @@ export default async function handleCallStatusUpdate(request: Request): Promise<
       content = "🚫 Busy.";
       break;
     }
+    // unreachable
+    case "queued":
+    case "canceled":
     default: break;
   }
 
