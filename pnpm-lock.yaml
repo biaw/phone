@@ -29,7 +29,7 @@ importers:
         version: 9.17.0(jiti@1.21.6)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/493cecfc90c494e9fefe25973999f728b6a45c3b(gpgcrm6pvoddilpxo23jdci5ne)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/ed259efda96152950e4507e48676a6089e589e03(gpgcrm6pvoddilpxo23jdci5ne)
       twilio:
         specifier: 5.4.0
         version: 5.4.0
@@ -37,8 +37,8 @@ importers:
         specifier: 5.7.2
         version: 5.7.2
       wrangler:
-        specifier: 3.95.0
-        version: 3.95.0(@cloudflare/workers-types@4.20241216.0)
+        specifier: 3.96.0
+        version: 3.96.0(@cloudflare/workers-types@4.20241216.0)
 
 packages:
 
@@ -79,10 +79,6 @@ packages:
     engines: {node: '>=16'}
     cpu: [x64]
     os: [win32]
-
-  '@cloudflare/workers-shared@0.11.0':
-    resolution: {integrity: sha512-A+lQ8xp7992qSeMmuQ0ssL6CPmm+ZmAv6Ddikan0n1jjpMAic+97l7xtVIsswSn9iLMFPYQ9uNN/8Fl0AgARIQ==}
-    engines: {node: '>=16.7.0'}
 
   '@cloudflare/workers-types@4.20241216.0':
     resolution: {integrity: sha512-PGIINXS+aE9vD2GYyWXfRG+VyxxceRkGDCoPxqwUweh1Bfv75HVotyL/adJ7mRVwh3XZDifGBdTaLReTT+Fcog==}
@@ -760,15 +756,15 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/493cecfc90c494e9fefe25973999f728b6a45c3b:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/493cecfc90c494e9fefe25973999f728b6a45c3b}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/ed259efda96152950e4507e48676a6089e589e03:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/ed259efda96152950e4507e48676a6089e589e03}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 2.12.1
       '@stylistic/eslint-plugin-jsx': 2.12.1
       '@stylistic/eslint-plugin-ts': 2.12.1
-      '@typescript-eslint/eslint-plugin': 8.18.0
-      '@typescript-eslint/parser': 8.18.0
+      '@typescript-eslint/eslint-plugin': 8.18.1
+      '@typescript-eslint/parser': 8.18.1
       eslint: 9.17.0
       eslint-plugin-import: 2.31.0
       eslint-plugin-jest: 28.9.0
@@ -1786,8 +1782,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.95.0:
-    resolution: {integrity: sha512-3w5852i3FNyDz421K2Qk4v5L8jjwegO5O8E1+VAQmjnm82HFNxpIRUBq0bmM7CTLvOPI/Jjcmj/eAWjQBL7QYg==}
+  wrangler@3.96.0:
+    resolution: {integrity: sha512-KjbHTUnwTa5eKl3hzv2h6nHBfAsbUkdurL7f6Y288/Bdn6tcEis13jLVR/nw/eWa3tNCBG1xOMZJboUyzWcC1g==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -1860,11 +1856,6 @@ snapshots:
 
   '@cloudflare/workerd-windows-64@1.20241205.0':
     optional: true
-
-  '@cloudflare/workers-shared@0.11.0':
-    dependencies:
-      mime: 3.0.0
-      zod: 3.23.8
 
   '@cloudflare/workers-types@4.20241216.0': {}
 
@@ -2629,7 +2620,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/493cecfc90c494e9fefe25973999f728b6a45c3b(gpgcrm6pvoddilpxo23jdci5ne):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/ed259efda96152950e4507e48676a6089e589e03(gpgcrm6pvoddilpxo23jdci5ne):
     dependencies:
       '@stylistic/eslint-plugin-js': 2.12.0(eslint@9.17.0(jiti@1.21.6))
       '@stylistic/eslint-plugin-jsx': 2.12.0(eslint@9.17.0(jiti@1.21.6))
@@ -3800,10 +3791,9 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20241205.0
       '@cloudflare/workerd-windows-64': 1.20241205.0
 
-  wrangler@3.95.0(@cloudflare/workers-types@4.20241216.0):
+  wrangler@3.96.0(@cloudflare/workers-types@4.20241216.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
-      '@cloudflare/workers-shared': 0.11.0
       '@esbuild-plugins/node-globals-polyfill': 0.2.3(esbuild@0.17.19)
       '@esbuild-plugins/node-modules-polyfill': 0.2.2(esbuild@0.17.19)
       blake3-wasm: 2.1.5
