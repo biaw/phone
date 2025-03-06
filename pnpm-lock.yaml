@@ -29,7 +29,7 @@ importers:
         version: 9.21.0(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/4ecf7d57b703583b01ce85e8f556745a30bece08(2192250bb2562baed0e55ff0452449e4)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/22c1ecfaa16af599c25b772320b51bb9e542235c(2192250bb2562baed0e55ff0452449e4)
       twilio:
         specifier: 5.4.5
         version: 5.4.5
@@ -37,8 +37,8 @@ importers:
         specifier: 5.8.2
         version: 5.8.2
       wrangler:
-        specifier: 3.113.0
-        version: 3.113.0(@cloudflare/workers-types@4.20250303.0)
+        specifier: 3.114.0
+        version: 3.114.0(@cloudflare/workers-types@4.20250303.0)
 
 packages:
 
@@ -932,8 +932,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/4ecf7d57b703583b01ce85e8f556745a30bece08:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/4ecf7d57b703583b01ce85e8f556745a30bece08}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/22c1ecfaa16af599c25b772320b51bb9e542235c:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/22c1ecfaa16af599c25b772320b51bb9e542235c}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 3.0.0
@@ -1996,8 +1996,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@3.113.0:
-    resolution: {integrity: sha512-Fr7sxO9kNFoN12AZLdwkQEnHN7pf1FziOfmEZsQIvyyMJTQC0HMWWS9LEsMdxJf0X9okoRMXLPfE9wtz1C1SIg==}
+  wrangler@3.114.0:
+    resolution: {integrity: sha512-cY0HxgU5yuc24tE1Y4KD2n9UzYYEx+9lSL7p/Sqj18SgDfwyiMPY/FryXQAPYLuD/S+dxArRQyeEkFSokIr75Q==}
     engines: {node: '>=16.17.0'}
     hasBin: true
     peerDependencies:
@@ -3000,7 +3000,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/4ecf7d57b703583b01ce85e8f556745a30bece08(2192250bb2562baed0e55ff0452449e4):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/22c1ecfaa16af599c25b772320b51bb9e542235c(2192250bb2562baed0e55ff0452449e4):
     dependencies:
       '@stylistic/eslint-plugin-js': 3.0.0(eslint@9.21.0(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 3.0.0(eslint@9.21.0(jiti@1.21.7))
@@ -4278,7 +4278,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250224.0
       '@cloudflare/workerd-windows-64': 1.20250224.0
 
-  wrangler@3.113.0(@cloudflare/workers-types@4.20250303.0):
+  wrangler@3.114.0(@cloudflare/workers-types@4.20250303.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.3.4
       '@cloudflare/unenv-preset': 2.0.0(unenv@2.0.0-rc.8)(workerd@1.20250224.0)
