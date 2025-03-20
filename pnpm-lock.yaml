@@ -31,8 +31,8 @@ importers:
         specifier: github:promise/eslint-config
         version: https://codeload.github.com/promise/eslint-config/tar.gz/5205811a496d23d71301338f70d5d91d2715c224(809e1bc707cc1680534aad784ac5cc24)
       twilio:
-        specifier: 5.5.0
-        version: 5.5.0
+        specifier: 5.5.1
+        version: 5.5.1
       typescript:
         specifier: 5.8.2
         version: 5.8.2
@@ -1906,8 +1906,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@5.5.0:
-    resolution: {integrity: sha512-iyI9kP3ZSrffUb9XApRNd35MMsV4Yp3OZM3Ewg7JNt5FvscsZZel/vCaxTlJ9D5kss0FKdeeu2c+GnaUK6Z1VA==}
+  twilio@5.5.1:
+    resolution: {integrity: sha512-b1gLd2eMsCSCHRerp3GQUedVlz0nCTt5FbyPxDPmMvk5cm6eIPk4ZTp5JNpgucARZgpCB2uUACJbdcidEHAUBA==}
     engines: {node: '>=14.0'}
 
   type-check@0.4.0:
@@ -4118,7 +4118,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@5.5.0:
+  twilio@5.5.1:
     dependencies:
       axios: 1.8.1
       dayjs: 1.11.13
