@@ -19,8 +19,8 @@ importers:
         version: 1.2.0
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20250613.0
-        version: 4.20250613.0
+        specifier: 4.20250614.0
+        version: 4.20250614.0
       '@tsconfig/strictest':
         specifier: 2.0.5
         version: 2.0.5
@@ -38,7 +38,7 @@ importers:
         version: 5.8.3
       wrangler:
         specifier: 4.20.0
-        version: 4.20.0(@cloudflare/workers-types@4.20250613.0)
+        version: 4.20.0(@cloudflare/workers-types@4.20250614.0)
 
 packages:
 
@@ -89,8 +89,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20250613.0':
-    resolution: {integrity: sha512-upH6pxh43ph9293aXVgEp/0ODhyT3deRdlL0NEe4eJJdgoSAJxWj0c2ASZHs3awOaItRTxTxo7GZk1d6wolPKQ==}
+  '@cloudflare/workers-types@4.20250614.0':
+    resolution: {integrity: sha512-a2r9Yamj+7YlXUeGbnpwZdxGyTx1rMyLdt2xtzk46HgpGq3QV8ka8s3B+tB4OzDPXH9x5TmplwlO9vTJkCXG1w==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -622,11 +622,6 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  acorn@8.14.1:
-    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
@@ -1027,10 +1022,6 @@ packages:
     resolution: {integrity: sha512-wpc+LXeiyiisxPlEkUzU6svyS1frIO3Mgxj1fdy7Pm8Ygzguax2N3Fa/D/ag1WqbOprdI+uY6wMUl8/a2G+iag==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  eslint-visitor-keys@4.2.0:
-    resolution: {integrity: sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
   eslint-visitor-keys@4.2.1:
     resolution: {integrity: sha512-Uhdk5sfqcee/9H/rCOJikYz67o0a2Tw2hGRPOG2Y1R2dg7brRe1uG0yaNQDHu+TO/uQPF/5eCapvYSmHUjt7JQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -1044,10 +1035,6 @@ packages:
     peerDependenciesMeta:
       jiti:
         optional: true
-
-  espree@10.3.0:
-    resolution: {integrity: sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==}
-    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
   espree@10.4.0:
     resolution: {integrity: sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==}
@@ -2069,7 +2056,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20250604.0':
     optional: true
 
-  '@cloudflare/workers-types@4.20250613.0': {}
+  '@cloudflare/workers-types@4.20250614.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2340,14 +2327,14 @@ snapshots:
   '@stylistic/eslint-plugin-js@4.2.0(eslint@9.29.0(jiti@1.21.7))':
     dependencies:
       eslint: 9.29.0(jiti@1.21.7)
-      eslint-visitor-keys: 4.2.0
-      espree: 10.3.0
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
 
   '@stylistic/eslint-plugin-jsx@4.2.0(eslint@9.29.0(jiti@1.21.7))':
     dependencies:
       eslint: 9.29.0(jiti@1.21.7)
-      eslint-visitor-keys: 4.2.0
-      espree: 10.3.0
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
       estraverse: 5.3.0
       picomatch: 4.0.2
 
@@ -2355,8 +2342,8 @@ snapshots:
     dependencies:
       '@typescript-eslint/utils': 8.33.0(eslint@9.29.0(jiti@1.21.7))(typescript@5.8.3)
       eslint: 9.29.0(jiti@1.21.7)
-      eslint-visitor-keys: 4.2.0
-      espree: 10.3.0
+      eslint-visitor-keys: 4.2.1
+      espree: 10.4.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2539,16 +2526,12 @@ snapshots:
   '@typescript-eslint/visitor-keys@8.31.1':
     dependencies:
       '@typescript-eslint/types': 8.31.1
-      eslint-visitor-keys: 4.2.0
+      eslint-visitor-keys: 4.2.1
 
   '@typescript-eslint/visitor-keys@8.33.0':
     dependencies:
       '@typescript-eslint/types': 8.33.0
-      eslint-visitor-keys: 4.2.0
-
-  acorn-jsx@5.3.2(acorn@8.14.1):
-    dependencies:
-      acorn: 8.14.1
+      eslint-visitor-keys: 4.2.1
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -2557,8 +2540,6 @@ snapshots:
   acorn-walk@8.3.2: {}
 
   acorn@8.14.0: {}
-
-  acorn@8.14.1: {}
 
   acorn@8.15.0: {}
 
@@ -3104,8 +3085,6 @@ snapshots:
 
   eslint-visitor-keys@3.4.3: {}
 
-  eslint-visitor-keys@4.2.0: {}
-
   eslint-visitor-keys@4.2.1: {}
 
   eslint@9.29.0(jiti@1.21.7):
@@ -3149,12 +3128,6 @@ snapshots:
       jiti: 1.21.7
     transitivePeerDependencies:
       - supports-color
-
-  espree@10.3.0:
-    dependencies:
-      acorn: 8.14.1
-      acorn-jsx: 5.3.2(acorn@8.14.1)
-      eslint-visitor-keys: 4.2.0
 
   espree@10.4.0:
     dependencies:
@@ -4255,7 +4228,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20250604.0
       '@cloudflare/workerd-windows-64': 1.20250604.0
 
-  wrangler@4.20.0(@cloudflare/workers-types@4.20250613.0):
+  wrangler@4.20.0(@cloudflare/workers-types@4.20250614.0):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@cloudflare/unenv-preset': 2.3.2(unenv@2.0.0-rc.17)(workerd@1.20250604.0)
@@ -4266,7 +4239,7 @@ snapshots:
       unenv: 2.0.0-rc.17
       workerd: 1.20250604.0
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20250613.0
+      '@cloudflare/workers-types': 4.20250614.0
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
