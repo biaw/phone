@@ -20,7 +20,7 @@
     "eslint-config-promise": "github:promise/eslint-config",
     "twilio": "5.7.2",
     "typescript": "5.8.3",
-    "wrangler": "4.22.0"
+    "wrangler": "4.23.0"
   },
   "packageManager": "pnpm@10.12.4"
 }
