@@ -1,10 +1,13 @@
 name = "phone"
 main = "./build/index.js"
 workers_dev = true
-compatibility_date = "2022-11-30"
+compatibility_date = "2025-05-05"
 
 [build]
 command = "npm run build"
+
+[observability.logs]
+enabled = true
 
 [vars]
 # Sensitive data should be stored in the worker itself as an encrypted value... in other terms: NOT IN THIS FILE!
