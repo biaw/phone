@@ -1,14 +1,15 @@
 import type { CallStatus } from "twilio/lib/rest/api/v2010/account/call";
+import type Env from "../environment";
 import { update } from "../utils/discordInteractions";
 import { decodeWebhookCredentials } from "../utils/webhookTokens";
 import { validate } from "../utils/webtoken";
 
-export default async function handleCallStatusUpdate(request: Request): Promise<Response> {
+export default async function handleCallStatusUpdate(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
   const token = url.searchParams.get("token");
 
-  if (!token) return Response.redirect(FALLBACK_URL, 307);
-  if (!await validate(token)) return new Response("", { status: 400 });
+  if (!token) return Response.redirect(env.FALLBACK_URL, 307);
+  if (!await validate(token, env)) return new Response("", { status: 400 });
 
   const credentials = decodeWebhookCredentials(token);
   const call = await request.formData();

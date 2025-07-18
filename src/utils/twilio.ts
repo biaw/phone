@@ -1,12 +1,13 @@
 import type { CallInstance } from "twilio/lib/rest/api/v2010/account/call";
+import type Env from "../environment";
 
-export default async function makeCall(message: string, statusCallback: URL): Promise<CallInstance> {
-  const endpoint = `https://api.twilio.com/2010-04-01/Accounts/${TWILIO_ACCOUNT_SID}/Calls.json`;
-  const token = btoa(`${TWILIO_ACCOUNT_SID}:${TWILIO_AUTH_TOKEN}`);
+export default async function makeCall(message: string, statusCallback: URL, env: Env): Promise<CallInstance> {
+  const endpoint = `https://api.twilio.com/2010-04-01/Accounts/${env.TWILIO_ACCOUNT_SID}/Calls.json`;
+  const token = btoa(`${env.TWILIO_ACCOUNT_SID}:${env.TWILIO_AUTH_TOKEN}`);
 
   const encoded = new URLSearchParams({
-    To: MY_PHONE_NUMBER,
-    From: TWILIO_PHONE_NUMBER,
+    To: env.MY_PHONE_NUMBER,
+    From: env.TWILIO_PHONE_NUMBER,
     Twiml: `<Response><Say>${Array<string>(3)
       .fill(message)
       .join("</Say><Pause length=\"3\"/><Say>")

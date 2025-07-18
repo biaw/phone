@@ -1,18 +1,17 @@
-// to avoid abuse, check if the request is from the owner by checking the key parameter against the public key
-
 import type { RESTPutAPIApplicationCommandsJSONBody } from "discord-api-types/v10";
 import { ApplicationCommandOptionType, ApplicationCommandType, RouteBases, Routes } from "discord-api-types/v10";
+import type Env from "../environment";
 
-export default async function handleUpdateCommands(request: Request): Promise<Response> {
+export default async function handleUpdateCommands(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
   const key = url.searchParams.get("key");
 
   if (!key) return new Response("", { status: 400 });
-  if (key !== DISCORD_PUBLIC_KEY) return new Response("", { status: 403 });
+  if (key !== env.DISCORD_PUBLIC_KEY) return new Response("", { status: 403 });
 
-  return fetch(RouteBases.api + Routes.applicationCommands(DISCORD_ID), {
+  return fetch(RouteBases.api + Routes.applicationCommands(env.DISCORD_ID), {
     method: "PUT",
-    headers: { "Authorization": `Bot ${DISCORD_TOKEN}`, "Content-Type": "application/json" },
+    headers: { "Authorization": `Bot ${env.DISCORD_TOKEN}`, "Content-Type": "application/json" },
     body: JSON.stringify([
       {
         type: ApplicationCommandType.ChatInput,

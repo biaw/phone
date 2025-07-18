@@ -1,3 +1,4 @@
+import type Env from "../environment";
 import { decode, encode } from "./webtoken";
 
 export interface WebhookCredentials {
@@ -5,8 +6,8 @@ export interface WebhookCredentials {
   token: string;
 }
 
-export function encodeWebhookCredentials(credentials: WebhookCredentials): Promise<string> {
-  return encode(credentials);
+export function encodeWebhookCredentials(credentials: WebhookCredentials, env: Env): Promise<string> {
+  return encode(credentials, env);
 }
 
 export function decodeWebhookCredentials(token: string): WebhookCredentials {
