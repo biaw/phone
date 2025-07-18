@@ -1,31 +1,24 @@
-[![Deploy](https://img.shields.io/github/actions/workflow/status/biaw/phone/build-and-publish.yml?label=build)](https://github.com/biaw/phone/actions/workflows/build-and-publish.yml)
-[![Linting](https://img.shields.io/github/actions/workflow/status/biaw/phone/linting.yml?label=quality)](https://github.com/biaw/phone/actions/workflows/linting.yml)
-[![DeepScan grade](https://deepscan.io/api/teams/16173/projects/19527/branches/625870/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=16173&pid=19527&bid=625870)
-[![GitHub Issues](https://img.shields.io/github/issues-raw/biaw/phone.svg)](https://github.com/biaw/phone/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr-raw/biaw/phone.svg)](https://github.com/biaw/phone/pulls)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://socialify.git.ci/biaw/phone/image?custom_language=Discord&description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Dark&logo=https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F354472%2Ftwilio-icon.svg">
+  <img alt="Image of the forum channel on Discord" src="https://socialify.git.ci/biaw/phone/image?custom_language=Discord&description=1&font=Inter&forks=1&language=1&name=1&owner=1&pattern=Plus&stargazers=1&theme=Light&logo=https%3A%2F%2Fwww.svgrepo.com%2Fshow%2F354472%2Ftwilio-icon.svg">
+</picture>
 
-# Discord Phone Worker [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/phone)
+# Explanation
 
-A Discord application to call your phone (yes, your actual phone) through Twilio in case of emergencies.
-
-## Screenshots
+Are you one of those people who are always available on Discord? Do you want to be even more available? Then this bot is for you! This small Cloudflare Worker allows your fellow Discord friends to call your cellphone, for example if you manage a service and it goes down, or if you're an admin in a server that is getting raided. The main purpose is to be even more available, like when you don't have Wi-Fi/cellular data available.
 
 <details>
   <summary>Click to see a GIF of the `/call` command in action</summary>
+  <!-- todo make this into a video (#167) -->
 
   ![biaw phone optimized](https://user-images.githubusercontent.com/10573728/178745844-a582e66a-9865-44cd-b6ef-15dd8ca023f6.gif)
 </details>
 
-## Usage examples
+# Setting up with Cloudflare Workers
 
-* If you're managing some form of service, like a webserver or Discord bot then your staff can call your cellphone if it's down.
-* If a server you're admin in is getting raided and you're not available, they can call your cellphone to let you know.
+[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/phone)
 
-Generally, it's a way for other Discord members to contact you through your phone. The main purpose is to be even more available, like when you don't have Wi-Fi/celluar data availale.
-
-## Setting up with Workers
-
-1. [Deploy with Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/biaw/phone)
+1. Deploy to Cloudflare Workers using the button above.
 2. Insert the environment variables listed in the [`wrangler.toml`](https://github.com/biaw/phone/blob/main/wrangler.toml) file. You can either use the `wrangler` command, or do it through the worker dashboard.
 3. Edit the Discord application and set the interactions endpoint to `https://phone.WORKER_SUBDOMAIN.workers.dev/interaction`. This is where the bot will receive interactions.
 4. Go to `https://phone.WORKER_SUBDOMAIN.workers.dev/update-commands?key=DISCORD_PUBLIC_KEY` to update and register the `/call` slash command.
