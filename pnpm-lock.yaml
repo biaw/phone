@@ -31,8 +31,8 @@ importers:
         specifier: github:promise/eslint-config
         version: https://codeload.github.com/promise/eslint-config/tar.gz/37d9b9ba44cd8f3685277600b0c3859c798e2bda(704cbc6a2150b6550abe7c51a25bc5a1)
       twilio:
-        specifier: 5.7.3
-        version: 5.7.3
+        specifier: 5.8.0
+        version: 5.8.0
       typescript:
         specifier: 5.8.3
         version: 5.8.3
@@ -715,8 +715,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.10.0:
-    resolution: {integrity: sha512-/1xYAC4MP/HEG+3duIhFr4ZQXR4sQXOIe+o6sdqzeykGLx6Upp/1p8MHqhINOvGeP7xyNHe7tsiJByc4SSVUxw==}
+  axios@1.11.0:
+    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1121,8 +1121,8 @@ packages:
     resolution: {integrity: sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==}
     engines: {node: '>=14'}
 
-  form-data@4.0.3:
-    resolution: {integrity: sha512-qsITQPfmvMOSAdeyZ+12I1c+CKSstAFAwu+97zrnWAbIr5u8wfsExUzCesVLC8NgHuRUqNN4Zy6UPWUTRGslcA==}
+  form-data@4.0.4:
+    resolution: {integrity: sha512-KrGhL9Q4zjj0kiUt5OO4Mr/A/jlI2jDYs5eHBpYHPcBEVSiipAvn2Ko2HnPe20rmcuuvMHNdZFp+4IlGTMF0Ow==}
     engines: {node: '>= 6'}
 
   fsevents@2.3.3:
@@ -1893,8 +1893,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@5.7.3:
-    resolution: {integrity: sha512-RuCjbQRLorFZrqd52KZ4JzeUbCbs/3KJVdawcAQ2yR53S2D0VwBQ+1Pkcnc20Y8QLKCP41TkQ98MHbF7upRhtA==}
+  twilio@5.8.0:
+    resolution: {integrity: sha512-aJLBvI7ODLmFHI7ZYLBiMZKIdHuF9PrPeRM/GBMDg/AAzGXs4V8gEnNPHyTVThK0/8J48YHSqXMlQ+WJR5nxoQ==}
     engines: {node: '>=14.0'}
 
   type-check@0.4.0:
@@ -2663,10 +2663,10 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.10.0:
+  axios@1.11.0:
     dependencies:
       follow-redirects: 1.15.9
-      form-data: 4.0.3
+      form-data: 4.0.4
       proxy-from-env: 1.1.0
     transitivePeerDependencies:
       - debug
@@ -3207,7 +3207,7 @@ snapshots:
       cross-spawn: 7.0.6
       signal-exit: 4.1.0
 
-  form-data@4.0.3:
+  form-data@4.0.4:
     dependencies:
       asynckit: 0.4.0
       combined-stream: 1.0.8
@@ -4088,9 +4088,9 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@5.7.3:
+  twilio@5.8.0:
     dependencies:
-      axios: 1.10.0
+      axios: 1.11.0
       dayjs: 1.11.13
       https-proxy-agent: 5.0.1
       jsonwebtoken: 9.0.2
