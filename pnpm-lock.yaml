@@ -12,8 +12,8 @@ importers:
         specifier: 3.2.0
         version: 3.2.0
       discord-api-types:
-        specifier: 0.38.18
-        version: 0.38.18
+        specifier: 0.38.19
+        version: 0.38.19
       discord-verify:
         specifier: 1.2.0
         version: 1.2.0
@@ -864,8 +864,8 @@ packages:
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
-  discord-api-types@0.38.18:
-    resolution: {integrity: sha512-ygenySjZKUaBf5JT8BNhZSxLzwpwdp41O0wVroOTu/N2DxFH7dxYTZUSnFJ6v+/2F3BMcnD47PC47u4aLOLxrQ==}
+  discord-api-types@0.38.19:
+    resolution: {integrity: sha512-NUNMTgjYrgxt7wrTNEqnEez4hIAYbfyBpsjxT5gW7+82GjQCPDZvN+em6t+4/P5kGWnnwDa4ci070BV7eI6GbA==}
 
   discord-verify@1.2.0:
     resolution: {integrity: sha512-8qlrMROW8DhpzWWzgNq9kpeLDxKanWa4EDVoj/ASVv2nr+dSr4JPmu2tFSydf3hAGI/OIJTnZyD0JulMYIxx4w==}
@@ -2814,7 +2814,7 @@ snapshots:
 
   didyoumean@1.2.2: {}
 
-  discord-api-types@0.38.18: {}
+  discord-api-types@0.38.19: {}
 
   discord-verify@1.2.0:
     dependencies:
