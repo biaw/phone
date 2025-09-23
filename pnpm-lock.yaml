@@ -22,14 +22,14 @@ importers:
         specifier: 4.20250922.0
         version: 4.20250922.0
       '@tsconfig/strictest':
-        specifier: 2.0.5
-        version: 2.0.5
+        specifier: 2.0.6
+        version: 2.0.6
       eslint:
         specifier: 9.36.0
         version: 9.36.0(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/046f62a766323b1fcd0add466c040762f946e50a(8a9a39c058c7a5995dff7ae6fc24a630)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/2dad0c92cc22df0afc6131080a18286d102f5ced(8a9a39c058c7a5995dff7ae6fc24a630)
       twilio:
         specifier: 5.9.0
         version: 5.9.0
@@ -485,8 +485,8 @@ packages:
     peerDependencies:
       eslint: '>=9.0.0'
 
-  '@tsconfig/strictest@2.0.5':
-    resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
+  '@tsconfig/strictest@2.0.6':
+    resolution: {integrity: sha512-tPOhmDhIUcDjvpDDYyiUdssP84Eqm7n5KxJe5J3/g+s6xoDIPAf+SIn06dhw7VkhxIvLOnhDDrX7tsqMHNEhDg==}
 
   '@tsndr/cloudflare-worker-jwt@3.2.0':
     resolution: {integrity: sha512-y45452JzKxFDfCUHNGrdgIcrJTkYa6xtrKtCQTjKj+hjzw8dOHF9R0uGuU8WxvCCMi4sMzZ1KREnZTsTy7DsiQ==}
@@ -938,8 +938,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/046f62a766323b1fcd0add466c040762f946e50a:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/046f62a766323b1fcd0add466c040762f946e50a}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/2dad0c92cc22df0afc6131080a18286d102f5ced:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/2dad0c92cc22df0afc6131080a18286d102f5ced}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -2359,7 +2359,7 @@ snapshots:
       - supports-color
       - typescript
 
-  '@tsconfig/strictest@2.0.5': {}
+  '@tsconfig/strictest@2.0.6': {}
 
   '@tsndr/cloudflare-worker-jwt@3.2.0': {}
 
@@ -2975,7 +2975,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/046f62a766323b1fcd0add466c040762f946e50a(8a9a39c058c7a5995dff7ae6fc24a630):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/2dad0c92cc22df0afc6131080a18286d102f5ced(8a9a39c058c7a5995dff7ae6fc24a630):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.36.0(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.36.0(jiti@1.21.7))
