@@ -31,8 +31,8 @@ importers:
         specifier: github:promise/eslint-config
         version: https://codeload.github.com/promise/eslint-config/tar.gz/2dad0c92cc22df0afc6131080a18286d102f5ced(8a9a39c058c7a5995dff7ae6fc24a630)
       twilio:
-        specifier: 5.9.0
-        version: 5.9.0
+        specifier: 5.10.1
+        version: 5.10.1
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -715,8 +715,8 @@ packages:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
 
-  axios@1.11.0:
-    resolution: {integrity: sha512-1Lx3WLFQWm3ooKDYZD1eXmoGO9fxYQjrycfHFC8P0sCfQVXyROp0p9PFWBehewBOdCwHc+f/b8I0fMto5eSfwA==}
+  axios@1.12.2:
+    resolution: {integrity: sha512-vMJzPewAlRyOgxV2dU0Cuz2O8zzzx9VYtbJOaBgXFeLc4IV/Eg50n4LowmehOOR61S8ZMpc2K5Sa7g6A4jfkUw==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1893,8 +1893,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@5.9.0:
-    resolution: {integrity: sha512-Ij+xT9MZZSjP64lsy+x6vYsCCb5m2Db9KffkMXBrN3zWbG3rbkXxl+MZVVzrvpwEdSbQD0vMuin+TTlQ6kR6Xg==}
+  twilio@5.10.1:
+    resolution: {integrity: sha512-J7+gPQggonXqc1GrkctxlHI8F6LYBAvVy6d8t2SOZ6HI3FpR9EHOcKBj7E+JYjigPKxYZeiiTDAyLpJsipbx2A==}
     engines: {node: '>=14.0'}
 
   type-check@0.4.0:
@@ -2663,7 +2663,7 @@ snapshots:
     dependencies:
       possible-typed-array-names: 1.1.0
 
-  axios@1.11.0:
+  axios@1.12.2:
     dependencies:
       follow-redirects: 1.15.9
       form-data: 4.0.4
@@ -4088,9 +4088,9 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@5.9.0:
+  twilio@5.10.1:
     dependencies:
-      axios: 1.11.0
+      axios: 1.12.2
       dayjs: 1.11.13
       https-proxy-agent: 5.0.1
       jsonwebtoken: 9.0.2
