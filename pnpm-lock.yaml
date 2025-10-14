@@ -29,10 +29,10 @@ importers:
         version: 9.37.0(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/fb5c0be3551a37fa0ddc95b8d8109062c622b7e7(8224ddf5dab73fccfca5a4702e1e3510)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/a5d49a0c86ec43c607f6021a2dd2d3a2bacbcbd8(8224ddf5dab73fccfca5a4702e1e3510)
       twilio:
-        specifier: 5.10.2
-        version: 5.10.2
+        specifier: 5.10.3
+        version: 5.10.3
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -934,8 +934,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/fb5c0be3551a37fa0ddc95b8d8109062c622b7e7:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/fb5c0be3551a37fa0ddc95b8d8109062c622b7e7}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/a5d49a0c86ec43c607f6021a2dd2d3a2bacbcbd8:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/a5d49a0c86ec43c607f6021a2dd2d3a2bacbcbd8}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -1899,8 +1899,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@5.10.2:
-    resolution: {integrity: sha512-pkMdXK0PJHR0elu3GmaDlYt4DDWPkkmuJLVUQjnctehu01IgbAp+VZ2ctbUSh1anDuqKqimAIuMnW9xmKith6w==}
+  twilio@5.10.3:
+    resolution: {integrity: sha512-msve3uADprpG+LRlthOxBUJWZDczGe+mdzotG7Wluaf8nn8fSIK0n2fX3INR26Xedeea/azmAdLK0c2rJhIHpQ==}
     engines: {node: '>=14.0'}
 
   type-check@0.4.0:
@@ -2976,7 +2976,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/fb5c0be3551a37fa0ddc95b8d8109062c622b7e7(8224ddf5dab73fccfca5a4702e1e3510):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/a5d49a0c86ec43c607f6021a2dd2d3a2bacbcbd8(8224ddf5dab73fccfca5a4702e1e3510):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.37.0(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.37.0(jiti@1.21.7))
@@ -4093,7 +4093,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@5.10.2:
+  twilio@5.10.3:
     dependencies:
       axios: 1.12.2
       dayjs: 1.11.18
