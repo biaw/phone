@@ -29,10 +29,10 @@ importers:
         version: 9.39.1(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/f8721bc1fdb9c79a5bece123bf436647412cbd62(16ad1862112d2b7258857a7bdcb554ac)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/061d042fb0f4904fcff89ae771ffe65a62691dfd(16ad1862112d2b7258857a7bdcb554ac)
       twilio:
-        specifier: 5.10.6
-        version: 5.10.6
+        specifier: 5.10.7
+        version: 5.10.7
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -911,8 +911,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/f8721bc1fdb9c79a5bece123bf436647412cbd62:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/f8721bc1fdb9c79a5bece123bf436647412cbd62}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/061d042fb0f4904fcff89ae771ffe65a62691dfd:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/061d042fb0f4904fcff89ae771ffe65a62691dfd}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -1834,8 +1834,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@5.10.6:
-    resolution: {integrity: sha512-mZkB1JHvIuxv4J0MUP+iNyK4xQi6XhtqZdiowDSZzOgT2MhYhGOtDTorb6+Y8NFsb589W3njtAUnRCPcXaiX3g==}
+  twilio@5.10.7:
+    resolution: {integrity: sha512-pELNeyQqkJMW/UkbcdNGDfOjMyt1FXoYOKXBDqOViHmcdJ04cq8Ty3VsrEAabi97YesK3T2v5KP5XKPY8uUx9w==}
     engines: {node: '>=14.0'}
 
   type-check@0.4.0:
@@ -1916,6 +1916,7 @@ packages:
   wrangler@4.52.0:
     resolution: {integrity: sha512-VRNclJHTDgNyPsaensT0RwX2arwvxMh4LHmdgpb1yeYMdV+elkcxlAWbMaKeOkbWPGsDxfniPyDIX+JYiiTWGA==}
     engines: {node: '>=20.0.0'}
+    deprecated: Issues deploying new Workers. Downgrade to 4.51.0.
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20251128.0
@@ -2881,7 +2882,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/f8721bc1fdb9c79a5bece123bf436647412cbd62(16ad1862112d2b7258857a7bdcb554ac):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/061d042fb0f4904fcff89ae771ffe65a62691dfd(16ad1862112d2b7258857a7bdcb554ac):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.39.1(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.39.1(jiti@1.21.7))
@@ -3947,7 +3948,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@5.10.6:
+  twilio@5.10.7:
     dependencies:
       axios: 1.13.2
       dayjs: 1.11.19
