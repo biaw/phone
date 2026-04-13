@@ -12,8 +12,8 @@ importers:
         specifier: 3.2.1
         version: 3.2.1
       discord-api-types:
-        specifier: 0.38.45
-        version: 0.38.45
+        specifier: 0.38.46
+        version: 0.38.46
       discord-verify:
         specifier: 1.2.0
         version: 1.2.0
@@ -886,8 +886,8 @@ packages:
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
 
-  discord-api-types@0.38.45:
-    resolution: {integrity: sha512-DiI01i00FPv6n+hXcFkFxK8Y/rFRpKs6U6aP32N4T73nTbj37Eua3H/95TBpLktLWB6xnLXhYDGvyLq6zzYY2w==}
+  discord-api-types@0.38.46:
+    resolution: {integrity: sha512-Ae7NcagMG+FPxwuQxGCPEHmLCKMm8YBMPWEuF5J3L+KWrlH4XGR3UoVo4Ne8bwhhHXbpf+DxDqOeW2jBFupXCQ==}
 
   discord-verify@1.2.0:
     resolution: {integrity: sha512-8qlrMROW8DhpzWWzgNq9kpeLDxKanWa4EDVoj/ASVv2nr+dSr4JPmu2tFSydf3hAGI/OIJTnZyD0JulMYIxx4w==}
@@ -1953,6 +1953,7 @@ packages:
   wrangler@4.82.0:
     resolution: {integrity: sha512-LbCjPAHNB35ecXRsacTSCbn3yz9mUJI6AumOUlddqkiNvtPNftNb4nScF7enx6ec5Q5ACkd9Ucn343irT12blA==}
     engines: {node: '>=20.3.0'}
+    deprecated: This release had problems with invalid OAuth scopes when logging in
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20260410.1
@@ -2770,7 +2771,7 @@ snapshots:
 
   didyoumean@1.2.2: {}
 
-  discord-api-types@0.38.45: {}
+  discord-api-types@0.38.46: {}
 
   discord-verify@1.2.0:
     dependencies:
