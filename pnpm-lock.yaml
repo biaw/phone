@@ -37,8 +37,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       wrangler:
-        specifier: 4.82.0
-        version: 4.82.0(@cloudflare/workers-types@4.20260413.1)
+        specifier: 4.82.2
+        version: 4.82.2(@cloudflare/workers-types@4.20260413.1)
 
 packages:
 
@@ -1950,10 +1950,9 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.82.0:
-    resolution: {integrity: sha512-LbCjPAHNB35ecXRsacTSCbn3yz9mUJI6AumOUlddqkiNvtPNftNb4nScF7enx6ec5Q5ACkd9Ucn343irT12blA==}
+  wrangler@4.82.2:
+    resolution: {integrity: sha512-SKfW21sTJUkM/Qd8zc9oc8TBkAWHRsXuTxE6XdToC55Ct84pR+IfRdaTjCTuC0dL+KYvauSvSn2rtqS2Ae+Dcw==}
     engines: {node: '>=20.3.0'}
-    deprecated: This release had problems with invalid OAuth scopes when logging in
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20260410.1
@@ -4125,7 +4124,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260410.1
       '@cloudflare/workerd-windows-64': 1.20260410.1
 
-  wrangler@4.82.0(@cloudflare/workers-types@4.20260413.1):
+  wrangler@4.82.2(@cloudflare/workers-types@4.20260413.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.2
       '@cloudflare/unenv-preset': 2.16.0(unenv@2.0.0-rc.24)(workerd@1.20260410.1)
