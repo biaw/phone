@@ -19,8 +19,8 @@ importers:
         version: 1.2.0
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20260426.1
-        version: 4.20260426.1
+        specifier: 4.20260429.1
+        version: 4.20260429.1
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -38,7 +38,7 @@ importers:
         version: 5.9.3
       wrangler:
         specifier: 4.86.0
-        version: 4.86.0(@cloudflare/workers-types@4.20260426.1)
+        version: 4.86.0(@cloudflare/workers-types@4.20260429.1)
 
 packages:
 
@@ -89,8 +89,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20260426.1':
-    resolution: {integrity: sha512-cBYeQaWwv/jFV8ualmwp6wIxmAf0rDe2DPPQwPbslKmPHqgv861YpAvm45r05K40QboZgxNQVIPgNkmtHqZeJQ==}
+  '@cloudflare/workers-types@4.20260429.1':
+    resolution: {integrity: sha512-WtwRki7i/RnkzXkJXhI9PmrmMpftpwDocRdeBQ29aHOOSCwV7nAlh163XRzjftnQGuW9nDEnu7Om+RJMn46N+Q==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -2013,7 +2013,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260426.1':
     optional: true
 
-  '@cloudflare/workers-types@4.20260426.1': {}
+  '@cloudflare/workers-types@4.20260429.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -4124,7 +4124,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260426.1
       '@cloudflare/workerd-windows-64': 1.20260426.1
 
-  wrangler@4.86.0(@cloudflare/workers-types@4.20260426.1):
+  wrangler@4.86.0(@cloudflare/workers-types@4.20260429.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.2
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260426.1)
@@ -4135,7 +4135,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260426.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260426.1
+      '@cloudflare/workers-types': 4.20260429.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
