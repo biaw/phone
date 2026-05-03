@@ -19,8 +19,8 @@ importers:
         version: 1.2.0
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20260502.1
-        version: 4.20260502.1
+        specifier: 4.20260503.1
+        version: 4.20260503.1
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -29,7 +29,7 @@ importers:
         version: 9.39.4(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/e20e0c58b4ff93535e02154eb39b08fe7def4ae2(f0e3eb70f9c4822b32d092cbdb42b6bd)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/6bf7fa67faec125849fadfd4851bcf24739646b3(f0e3eb70f9c4822b32d092cbdb42b6bd)
       twilio:
         specifier: 6.0.0
         version: 6.0.0
@@ -38,7 +38,7 @@ importers:
         version: 5.9.3
       wrangler:
         specifier: 4.87.0
-        version: 4.87.0(@cloudflare/workers-types@4.20260502.1)
+        version: 4.87.0(@cloudflare/workers-types@4.20260503.1)
 
 packages:
 
@@ -89,8 +89,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20260502.1':
-    resolution: {integrity: sha512-gttFwGL0pYBF5nA2GIazKTVjDqXLnqWa/Mstd5aGTZyzkhmPy0ej3L2sIn2h8kAbF6I+XGK0P4UXvlmnuxefYg==}
+  '@cloudflare/workers-types@4.20260503.1':
+    resolution: {integrity: sha512-8VKtafR4fNMtddutOnam3yq3AQvrl9bzuMio3B3AEAfrdx7xaaDV0Oyxz54P07lODwX0jydukGLC1rpDdYXAAA==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -955,8 +955,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/e20e0c58b4ff93535e02154eb39b08fe7def4ae2:
-    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/e20e0c58b4ff93535e02154eb39b08fe7def4ae2}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/6bf7fa67faec125849fadfd4851bcf24739646b3:
+    resolution: {tarball: https://codeload.github.com/promise/eslint-config/tar.gz/6bf7fa67faec125849fadfd4851bcf24739646b3}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -2017,7 +2017,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260430.1':
     optional: true
 
-  '@cloudflare/workers-types@4.20260502.1': {}
+  '@cloudflare/workers-types@4.20260503.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2935,7 +2935,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/e20e0c58b4ff93535e02154eb39b08fe7def4ae2(f0e3eb70f9c4822b32d092cbdb42b6bd):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/6bf7fa67faec125849fadfd4851bcf24739646b3(f0e3eb70f9c4822b32d092cbdb42b6bd):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.39.4(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.39.4(jiti@1.21.7))
@@ -4133,7 +4133,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260430.1
       '@cloudflare/workerd-windows-64': 1.20260430.1
 
-  wrangler@4.87.0(@cloudflare/workers-types@4.20260502.1):
+  wrangler@4.87.0(@cloudflare/workers-types@4.20260503.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260430.1)
@@ -4144,7 +4144,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260430.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260502.1
+      '@cloudflare/workers-types': 4.20260503.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
