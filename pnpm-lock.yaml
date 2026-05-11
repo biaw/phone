@@ -19,8 +19,8 @@ importers:
         version: 1.2.0
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20260510.1
-        version: 4.20260510.1
+        specifier: 4.20260511.1
+        version: 4.20260511.1
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -29,7 +29,7 @@ importers:
         version: 9.39.4(jiti@1.21.7)
       eslint-config-promise:
         specifier: github:promise/eslint-config
-        version: https://codeload.github.com/promise/eslint-config/tar.gz/58d8b74d466c79741f615f4825aa16d509e4d581(f0e3eb70f9c4822b32d092cbdb42b6bd)
+        version: https://codeload.github.com/promise/eslint-config/tar.gz/65897f63f260938f998849bfc4ae232845e94b0e(f0e3eb70f9c4822b32d092cbdb42b6bd)
       twilio:
         specifier: 6.0.2
         version: 6.0.2
@@ -38,7 +38,7 @@ importers:
         version: 5.9.3
       wrangler:
         specifier: 4.90.0
-        version: 4.90.0(@cloudflare/workers-types@4.20260510.1)
+        version: 4.90.0(@cloudflare/workers-types@4.20260511.1)
 
 packages:
 
@@ -89,8 +89,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20260510.1':
-    resolution: {integrity: sha512-Wcmb56nJMHw1BLpArV3RSmWb/z0Zx3S8OJ5mVUTb+AVTbyopU9iJzZrFGlYX18Ju9hXxqak2mhFMq6sCaFssag==}
+  '@cloudflare/workers-types@4.20260511.1':
+    resolution: {integrity: sha512-FA+si7cOq9i/gtCHhIc0XJL0l1F/ApF+m00752Aj7WZFJrj3ZulT2T8/+rT3BabMT0QEnqFEGIqCgrmqhgEfMg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -955,8 +955,8 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/58d8b74d466c79741f615f4825aa16d509e4d581:
-    resolution: {gitHosted: true, integrity: sha512-t5A0eEAvIS727y4QEPIMv2hzYJ/gI2q36AudNYor+A+XAZmi7BIBbh8iYqEw/y4xfJEkd5vLuPoNfDhF5ulqEQ==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/58d8b74d466c79741f615f4825aa16d509e4d581}
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/65897f63f260938f998849bfc4ae232845e94b0e:
+    resolution: {gitHosted: true, integrity: sha512-VS1Kt4gCE+X/82SYyclEEoumsQjYN0+C8jl+vz9PDI0sNlrfEMz48FpiAJ/qJbpPV6/kkXIp3S1433IWWICd1w==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/65897f63f260938f998849bfc4ae232845e94b0e}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -2017,7 +2017,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260507.1':
     optional: true
 
-  '@cloudflare/workers-types@4.20260510.1': {}
+  '@cloudflare/workers-types@4.20260511.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -2935,7 +2935,7 @@ snapshots:
 
   escape-string-regexp@4.0.0: {}
 
-  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/58d8b74d466c79741f615f4825aa16d509e4d581(f0e3eb70f9c4822b32d092cbdb42b6bd):
+  eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/65897f63f260938f998849bfc4ae232845e94b0e(f0e3eb70f9c4822b32d092cbdb42b6bd):
     dependencies:
       '@stylistic/eslint-plugin-js': 4.2.0(eslint@9.39.4(jiti@1.21.7))
       '@stylistic/eslint-plugin-jsx': 4.2.0(eslint@9.39.4(jiti@1.21.7))
@@ -4133,7 +4133,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260507.1
       '@cloudflare/workerd-windows-64': 1.20260507.1
 
-  wrangler@4.90.0(@cloudflare/workers-types@4.20260510.1):
+  wrangler@4.90.0(@cloudflare/workers-types@4.20260511.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260507.1)
@@ -4144,7 +4144,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260507.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260510.1
+      '@cloudflare/workers-types': 4.20260511.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
