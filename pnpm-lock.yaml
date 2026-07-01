@@ -19,8 +19,8 @@ importers:
         version: 1.2.0
     devDependencies:
       '@cloudflare/workers-types':
-        specifier: 4.20260630.1
-        version: 4.20260630.1
+        specifier: 4.20260701.1
+        version: 4.20260701.1
       '@tsconfig/strictest':
         specifier: 2.0.8
         version: 2.0.8
@@ -38,7 +38,7 @@ importers:
         version: 5.9.3
       wrangler:
         specifier: 4.106.0
-        version: 4.106.0(@cloudflare/workers-types@4.20260630.1)
+        version: 4.106.0(@cloudflare/workers-types@4.20260701.1)
 
 packages:
 
@@ -89,8 +89,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@cloudflare/workers-types@4.20260630.1':
-    resolution: {integrity: sha512-yl+c9vwvko9UZ0frmtsHuwOh3BRHvNjLrfelAp5Akpqe1+Ho1UWekr3nmjJ1D64CH0Yb0K0oRMV4i7npOFzsog==}
+  '@cloudflare/workers-types@4.20260701.1':
+    resolution: {integrity: sha512-eGZ+PWPlu/yUxH+BJoplV45oSA709sjYFYr2kjrqSo+601qE15X4tsuZcPz1KE6Fb3ObGA9d9ZXn53n34NtyiA==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -960,7 +960,7 @@ packages:
     engines: {node: '>=10'}
 
   eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/f35740d3efbeabb7f40ef7294fcefafc9d4b0148:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/f35740d3efbeabb7f40ef7294fcefafc9d4b0148}
+    resolution: {gitHosted: true, integrity: sha512-qDWXd38Nxf4Yh2K/9KFnAu+3XCHZp0Ya8AsBuLDdlY8SIjHV1Fww28J95CLP7CCN+RazG24hvC7UzWvGMDVD1w==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/f35740d3efbeabb7f40ef7294fcefafc9d4b0148}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -2025,7 +2025,7 @@ snapshots:
   '@cloudflare/workerd-windows-64@1.20260630.1':
     optional: true
 
-  '@cloudflare/workers-types@4.20260630.1': {}
+  '@cloudflare/workers-types@4.20260701.1': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -4162,7 +4162,7 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260630.1
       '@cloudflare/workerd-windows-64': 1.20260630.1
 
-  wrangler@4.106.0(@cloudflare/workers-types@4.20260630.1):
+  wrangler@4.106.0(@cloudflare/workers-types@4.20260701.1):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.1(unenv@2.0.0-rc.24)(workerd@1.20260630.1)
@@ -4173,7 +4173,7 @@ snapshots:
       unenv: 2.0.0-rc.24
       workerd: 1.20260630.1
     optionalDependencies:
-      '@cloudflare/workers-types': 4.20260630.1
+      '@cloudflare/workers-types': 4.20260701.1
       fsevents: 2.3.3
     transitivePeerDependencies:
       - bufferutil
