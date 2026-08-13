@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@tsndr/cloudflare-worker-jwt':
-        specifier: 3.2.1
-        version: 3.2.1
+        specifier: 3.2.3
+        version: 3.2.3
       discord-api-types:
         specifier: 0.38.53
         version: 0.38.53
@@ -543,8 +543,8 @@ packages:
   '@tsconfig/strictest@2.0.8':
     resolution: {integrity: sha512-XnQ7vNz5HRN0r88GYf1J9JJjqtZPiHt2woGJOo2dYqyHGGcd6OLGqSlBB6p1j9mpzja6Oe5BoPqWmeDx6X9rLw==}
 
-  '@tsndr/cloudflare-worker-jwt@3.2.1':
-    resolution: {integrity: sha512-1AfDEgu7DTbU0sXDSOKh4D5t7+RJ0dIRRaDmoX3LFeW0AxQdunuqTQ7AVGwNJqOnxrbxiruyvX01cf9HHqEvXQ==}
+  '@tsndr/cloudflare-worker-jwt@3.2.3':
+    resolution: {integrity: sha512-qAwqvhtO0d6Ixsxpi3a01HKCLQlwwjBxDoqF/6fvMEWgW/fdjE3AE8GqO8lQilryBilNX9wNR8p6vMbVWyzJ4Q==}
 
   '@types/body-parser@1.19.6':
     resolution: {integrity: sha512-HLFeCYgz89uk22N5Qg3dvGvsv46B8GLvKKo1zKG4NybA8U2DiEO3w9lqGg29t/tfLRJpJ6iQxnVw4OnB7MoM9g==}
@@ -2365,7 +2365,7 @@ snapshots:
 
   '@tsconfig/strictest@2.0.8': {}
 
-  '@tsndr/cloudflare-worker-jwt@3.2.1': {}
+  '@tsndr/cloudflare-worker-jwt@3.2.3': {}
 
   '@types/body-parser@1.19.6':
     dependencies:
