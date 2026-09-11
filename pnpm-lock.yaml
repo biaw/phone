@@ -31,8 +31,8 @@ importers:
         specifier: github:promise/eslint-config
         version: https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6(075fcfd40298171693a993c191caa829)
       twilio:
-        specifier: 6.1.0
-        version: 6.1.0
+        specifier: 6.1.1
+        version: 6.1.1
       typescript:
         specifier: 5.9.3
         version: 5.9.3
@@ -969,7 +969,7 @@ packages:
     engines: {node: '>=10'}
 
   eslint-config-promise@https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6}
+    resolution: {gitHosted: true, integrity: sha512-PeHeZDS/RzsheIIvH/htUcU9M0aWEc2x1pH8Y0Iu0Fhzo/TmS1/TDgzSJ5oKc6FdM1KVwPvSXRFy/p7/L824Ng==, tarball: https://codeload.github.com/promise/eslint-config/tar.gz/ae041b58f06030a1f233a59eab6ea10eb5be42c6}
     version: 0.0.0
     peerDependencies:
       '@stylistic/eslint-plugin-js': 4.2.0
@@ -1893,8 +1893,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  twilio@6.1.0:
-    resolution: {integrity: sha512-a226jNHitbQQoLs4chB9TGzG2mOrxKR9NHs5XH8ZE4k48MQWdAwh+Hh6JsVB0hmCrsZpyHCsybf81Se6u6627A==}
+  twilio@6.1.1:
+    resolution: {integrity: sha512-d9xFCQaa8DpuDvFiG49TwmppmULHhqzEVncpppazS5oZv5O0E9Wb76STCHt4q+ZjWDL6RAtKey+u8jWcQLKWjw==}
     engines: {node: '>=20.0.0'}
 
   type-check@0.4.0:
@@ -4053,7 +4053,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  twilio@6.1.0:
+  twilio@6.1.1:
     dependencies:
       axios: 1.20.0
       dayjs: 1.11.23
