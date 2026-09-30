@@ -1,6 +1,7 @@
 import type { CallStatus } from "twilio/lib/rest/api/v2010/account/call";
 import type Env from "../environment";
 import { update } from "../utils/discordInteractions";
+import { validateTwilioSignature } from "../utils/twilio";
 import { decodeWebhookCredentials } from "../utils/webhookTokens";
 import { validate } from "../utils/webtoken";
 
@@ -13,6 +14,8 @@ export default async function handleCallStatusUpdate(request: Request, env: Env)
 
   const credentials = decodeWebhookCredentials(token);
   const call = await request.formData();
+
+  if (!await validateTwilioSignature(request, call, env)) return new Response("", { status: 403 });
 
   const callStatus = call.get("CallStatus") as CallStatus;
 
